@@ -199,8 +199,8 @@ footer a:hover{color:var(--gold);}
         <div class="speed-next">
           <span class="speed-nextlabel">Your next step</span>
           <a class="speed-read" id="readLink" href="https://contracks.netlify.app/articles/level2/l2-specialreport-resolve.html">1 · Read — Beyond Paperwork Governance →</a>
-          <a class="speed-cta" id="speedLink" href="/control-review.html">2 · Request your Review →</a>
-          <a class="speed-read" id="altLink" href="/control-review.html" style="display:none;margin:.9rem 0 0;border-bottom:0;padding-bottom:0;">Or request a complimentary Review first →</a>
+          <a class="speed-cta" id="speedLink" href="/control-review.html">2 · Book your free 45-minute review call →</a>
+          <a class="speed-read" id="altLink" href="/control-review.html" style="display:none;margin:.9rem 0 0;border-bottom:0;padding-bottom:0;">Or see how the review call works →</a>
         </div>
       </div>
     </div>
@@ -486,13 +486,13 @@ footer a:hover{color:var(--gold);}
   var srMap={START:['l1-specialreport-start','An Idea Is Worth Nothing',1,'/start.html'],RESOLVE:['l2-specialreport-resolve','Beyond Paperwork Governance',2,null],RESHAPE:['l3-specialreport-reshape','The 5Cs of Refit',3,'/reshape.html'],GROW:['l4-specialreport-grow','Built to Stall',4,'/grow.html']};
   var sr=srMap[rec.key];
   if(sr){var rl=document.getElementById('readLink');rl.href='https://contracks.netlify.app/articles/level'+sr[2]+'/'+sr[0]+'.html';rl.textContent='1 · Read — '+sr[1]+' →';
-    if(sr[3]){var s0=document.getElementById('speedLink'),a0=document.getElementById('altLink');a0.href=s0.href;a0.style.display='block';s0.href=sr[3];s0.textContent='2 · See your next step →';}}
+    if(sr[3]){var s0=document.getElementById('speedLink'),a0=document.getElementById('altLink');a0.href='/control-review.html';a0.style.display='block';s0.href=sr[3];s0.textContent='2 · See your next step →';}}
   var capVal=(live&&q.get('cap'))||'';
-  var tooSmall=/Under|\u20ac250k|\u20ac2M.\u20ac10M/.test(capVal);
+  var tooSmall=false;
   if(rec.key==='RESOLVE'&&!tooSmall){
     var sl=document.getElementById('speedLink'),al=document.getElementById('altLink');
-    al.href='/index.html?'+new URLSearchParams({plan:'review',s:data.overall,contain:data.pillars.contain,command:data.pillars.command,close:data.pillars.close,confirm:data.pillars.confirm,control:data.pillars.control}).toString()+'#book'; al.style.display='block';
-    sl.href='/index.html?'+new URLSearchParams({plan:'reset',s:data.overall,contain:data.pillars.contain,command:data.pillars.command,close:data.pillars.close,confirm:data.pillars.confirm,control:data.pillars.control}).toString()+'#book'; sl.textContent='2 \u00b7 Book a Reset scoping call \u2192';
+    al.href='/control-review.html'; al.style.display='block';
+    sl.href='/index.html?'+new URLSearchParams({plan:'reset',s:data.overall,contain:data.pillars.contain,command:data.pillars.command,close:data.pillars.close,confirm:data.pillars.confirm,control:data.pillars.control}).toString()+'#book'; sl.textContent='2 \u00b7 Book your free 45-minute review call \u2192';
   }
 
   // three priority actions, from the three weakest pillars
