@@ -7,14 +7,6 @@
 
 # Past material stays on the old site until it is republished
 [[redirects]]
-  from = "/library"
-  to = "https://contracks.netlify.app/library"
-  status = 302
-[[redirects]]
-  from = "/library.html"
-  to = "https://contracks.netlify.app/library"
-  status = 302
-[[redirects]]
   from = "/articles/*"
   to = "https://contracks.netlify.app/articles/:splat"
   status = 302
@@ -23,23 +15,17 @@
   to = "https://contracks.netlify.app/audio/:splat"
   status = 302
 
-# Pages left out of the first version
+# The book has its own page
 [[redirects]]
-  from = "/resolve"
-  to = "/reset.html"
+  from = "/book"
+  to = "https://serguei-poppeleer.netlify.app/book"
   status = 302
 [[redirects]]
-  from = "/start"
-  to = "/"
+  from = "/book.html"
+  to = "https://serguei-poppeleer.netlify.app/book"
   status = 302
-[[redirects]]
-  from = "/reshape"
-  to = "/"
-  status = 302
-[[redirects]]
-  from = "/grow"
-  to = "/"
-  status = 302
+
+# French is retired for now
 [[redirects]]
   from = "/fr"
   to = "/"

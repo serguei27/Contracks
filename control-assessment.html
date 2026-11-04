@@ -6,12 +6,12 @@
 <title>CONTROL — Delivery Control Readiness Assessment</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <style>
 :root{--navy:#0A1A33;--navy-soft:#14253F;--gold:#C9A959;--grey:#6E7783;--cream:#F5F1E7;--white:#fff;--accent:#1F7A8C;--warn:#C0552B;--line:#E1DDD3;}
 *{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Inter',sans-serif;color:var(--navy);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased;}
-h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.15;letter-spacing:-.01em;}
+body{font-family:'DM Sans',sans-serif;color:var(--navy);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased;}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif;font-weight:600;line-height:1.15;letter-spacing:-.01em;}
 em{color:var(--gold);font-style:italic;}
 .label{font-size:.78rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);display:inline-block;margin-bottom:.8rem;}
 
@@ -26,7 +26,7 @@ em{color:var(--gold);font-style:italic;}
 .intro p{color:var(--grey);max-width:520px;margin:0 auto;}
 
 .pillar-block{background:#fff;border-radius:5px;padding:1.8rem 1.7rem;margin-bottom:1.2rem;box-shadow:0 1px 3px rgba(10,26,51,.05);}
-.pillar-block h2{font-size:1.05rem;font-family:'Inter';font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:.2rem;}
+.pillar-block h2{font-size:1.05rem;font-family:'DM Sans';font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:.2rem;}
 .pillar-block .pdesc{font-size:.85rem;color:var(--grey);margin-bottom:1.4rem;}
 
 .q{padding:1.1rem 0;border-top:1px solid var(--line);}
@@ -66,21 +66,21 @@ em{color:var(--gold);font-style:italic;}
 .concern-pills label:has(input:checked){background:var(--navy);border-color:var(--navy);color:#fff;}
 
 .submit-row{text-align:center;margin-top:2rem;}
-.btn-primary{display:inline-block;padding:1.05rem 2.6rem;font-size:1rem;font-weight:600;letter-spacing:.02em;border-radius:3px;text-decoration:none;cursor:pointer;border:none;font-family:'Inter',sans-serif;background:var(--gold);color:var(--navy);box-shadow:0 8px 26px rgba(201,169,89,.25);transition:transform .15s;}
+.btn-primary{display:inline-block;padding:1.05rem 2.6rem;font-size:1rem;font-weight:600;letter-spacing:.02em;border-radius:3px;text-decoration:none;cursor:pointer;border:none;font-family:'DM Sans',sans-serif;background:var(--gold);color:var(--navy);box-shadow:0 8px 26px rgba(201,169,89,.25);transition:transform .15s;}
 .btn-primary:hover{transform:translateY(-1px);}
 .err{color:var(--warn);font-size:.88rem;margin-top:.9rem;min-height:1.2em;font-weight:500;}
 
 footer{background:var(--navy);color:rgba(255,255,255,.55);padding:2rem;text-align:center;font-size:.82rem;}
-footer .gold{color:var(--gold);font-style:italic;font-family:'Cormorant Garamond',serif;}
+footer .gold{color:var(--gold);font-style:italic;font-family:'Playfair Display',serif;}
 footer a{color:rgba(255,255,255,.7);text-decoration:none;}
 </style>
+<link rel="stylesheet" href="/kept.css">
+<meta name="description" content="Take the free CONTROL Diagnostic: 20 questions, about 4 minutes, and an instant Level 1 to 5 score across the five delivery controls.">
+<link rel="canonical" href="https://contracks.global/control-assessment">
 </head>
 <body>
 
-<header class="site-header">
-  <a href="/" class="brand">CONTRACKS<span class="dot">.</span>GLOBAL</a>
-  <a href="/control.html" class="nav-back">← Back to CONTROL</a>
-</header>
+<nav class="top"><div class="wrap"><a href="/index.html" class="logo"><b>Contracks Global<span>.</span></b></a><a href="/control.html" class="back">&larr; Back to CONTROL</a></div></nav>
 
 <div class="wrap">
   <div class="intro">
@@ -206,11 +206,7 @@ footer a{color:rgba(255,255,255,.7);text-decoration:none;}
   </form>
 </div>
 
-<footer>
-  <div class="gold">Better contracts. Better companies. Better communities.</div>
-  <div style="margin-top:.6rem;"><a href="mailto:hello@contracks.global">hello@contracks.global</a> · <a href="/privacy.html">Privacy Policy</a></div>
-  <div style="margin-top:.6rem;font-size:.76rem;color:rgba(255,255,255,.4);">© Contracks Global 2026</div>
-</footer>
+<footer class="site"><p><b>Contracks Global<span>.</span></b></p><p style="margin:8px 0 12px">Better contracts. Better companies. Better communities.</p><p><a href="mailto:hello@contracks.global">hello@contracks.global</a><a href="/privacy.html">Privacy</a></p><p style="margin-top:12px;font-size:.84rem">&copy; 2026 Contracks Global</p></footer>
 
 <script>
 (function(){
