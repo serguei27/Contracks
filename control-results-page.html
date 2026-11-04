@@ -198,7 +198,7 @@ footer a:hover{color:var(--gold);}
         <p class="speed-why" id="speedWhy"></p>
         <div class="speed-next">
           <span class="speed-nextlabel">Your next step</span>
-          <a class="speed-read" id="readLink" href="https://contracks.netlify.app/articles/level2/l2-specialreport-resolve.html">1 · Read — Beyond Paperwork Governance →</a>
+          <a class="speed-read" id="readLink" href="/articles/l2-specialreport-resolve.html">1 · Read — Beyond Paperwork Governance →</a>
           <a class="speed-cta" id="speedLink" href="/control-review.html">2 · Book your free 45-minute review call →</a>
           <a class="speed-read" id="altLink" href="/control-review.html" style="display:none;margin:.9rem 0 0;border-bottom:0;padding-bottom:0;">Or see how the review call works →</a>
         </div>
@@ -485,7 +485,7 @@ footer a:hover{color:var(--gold);}
   // The Reset fits an owner-side programme of EUR 10M+ where control is slipping
   var srMap={START:['l1-specialreport-start','An Idea Is Worth Nothing',1,'/start.html'],RESOLVE:['l2-specialreport-resolve','Beyond Paperwork Governance',2,null],RESHAPE:['l3-specialreport-reshape','The 5Cs of Refit',3,'/reshape.html'],GROW:['l4-specialreport-grow','Built to Stall',4,'/grow.html']};
   var sr=srMap[rec.key];
-  if(sr){var rl=document.getElementById('readLink');rl.href='https://contracks.netlify.app/articles/level'+sr[2]+'/'+sr[0]+'.html';rl.textContent='1 · Read — '+sr[1]+' →';
+  if(sr){var rl=document.getElementById('readLink');rl.href='/articles/'+sr[0];rl.textContent='1 · Read — '+sr[1]+' →';
     if(sr[3]){var s0=document.getElementById('speedLink'),a0=document.getElementById('altLink');a0.href='/control-review.html';a0.style.display='block';s0.href=sr[3];s0.textContent='2 · See your next step →';}}
   var capVal=(live&&q.get('cap'))||'';
   var tooSmall=false;

@@ -5,14 +5,56 @@
 [functions]
   node_bundler = "esbuild"
 
-# Past material stays on the old site until it is republished
+# Old article addresses
 [[redirects]]
-  from = "/articles/*"
-  to = "https://contracks.netlify.app/articles/:splat"
-  status = 302
+  from = "/articles/level1/*"
+  to = "/articles/:splat"
+  status = 301
 [[redirects]]
-  from = "/audio/*"
-  to = "https://contracks.netlify.app/audio/:splat"
+  from = "/articles/level2/*"
+  to = "/articles/:splat"
+  status = 301
+[[redirects]]
+  from = "/articles/level3/*"
+  to = "/articles/:splat"
+  status = 301
+[[redirects]]
+  from = "/articles/level4/*"
+  to = "/articles/:splat"
+  status = 301
+[[redirects]]
+  from = "/articles/level5/*"
+  to = "/articles/:splat"
+  status = 301
+
+# Old links inside the articles
+[[redirects]]
+  from = "/specialreport2"
+  to = "/articles/l2-specialreport-resolve"
+  status = 301
+[[redirects]]
+  from = "/specialreport3"
+  to = "/articles/l3-specialreport-reshape"
+  status = 301
+[[redirects]]
+  from = "/specialreport4"
+  to = "/articles/l4-specialreport-grow"
+  status = 301
+[[redirects]]
+  from = "/start-review"
+  to = "/start"
+  status = 301
+[[redirects]]
+  from = "/discovery"
+  to = "/#book"
+  status = 301
+[[redirects]]
+  from = "/resolve-assessment.html"
+  to = "/control-assessment"
+  status = 301
+[[redirects]]
+  from = "/glossary.html"
+  to = "/library"
   status = 302
 
 # The book has its own page
