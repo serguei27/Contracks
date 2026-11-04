@@ -1,0 +1,50 @@
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
+
+# Past material stays on the old site until it is republished
+[[redirects]]
+  from = "/library"
+  to = "https://contracks.netlify.app/library"
+  status = 302
+[[redirects]]
+  from = "/library.html"
+  to = "https://contracks.netlify.app/library"
+  status = 302
+[[redirects]]
+  from = "/articles/*"
+  to = "https://contracks.netlify.app/articles/:splat"
+  status = 302
+[[redirects]]
+  from = "/audio/*"
+  to = "https://contracks.netlify.app/audio/:splat"
+  status = 302
+
+# Pages left out of the first version
+[[redirects]]
+  from = "/resolve"
+  to = "/reset.html"
+  status = 302
+[[redirects]]
+  from = "/start"
+  to = "/"
+  status = 302
+[[redirects]]
+  from = "/reshape"
+  to = "/"
+  status = 302
+[[redirects]]
+  from = "/grow"
+  to = "/"
+  status = 302
+[[redirects]]
+  from = "/fr"
+  to = "/"
+  status = 302
+[[redirects]]
+  from = "/fr/*"
+  to = "/"
+  status = 302
