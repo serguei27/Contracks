@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <style>
-:root{--navy:#0A1A33;--navy-soft:#14253F;--gold:#C9A959;--grey:#6E7783;--cream:#F5F1E7;--white:#fff;--accent:#1F7A8C;--warn:#C0552B;--line:#E1DDD3;}
+:root{--navy:#0A1628;--navy-soft:#0F2D52;--gold:#C5A050;--grey:#5A6476;--cream:#F7F0DF;--white:#fff;--accent:#0F2D52;--warn:#C0552B;--line:#E1DDD3;}
 *{margin:0;padding:0;box-sizing:border-box;}
 body{font-family:'DM Sans',sans-serif;color:var(--navy);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased;}
 h1,h2,h3{font-family:'Playfair Display',Georgia,serif;font-weight:600;line-height:1.15;letter-spacing:-.01em;}
@@ -73,6 +73,9 @@ em{color:var(--gold);font-style:italic;}
 footer{background:var(--navy);color:rgba(255,255,255,.55);padding:2rem;text-align:center;font-size:.82rem;}
 footer .gold{color:var(--gold);font-style:italic;font-family:'Playfair Display',serif;}
 footer a{color:rgba(255,255,255,.7);text-decoration:none;}
+.wiz-progress{height:6px;background:var(--line);border-radius:4px;overflow:hidden;margin-bottom:.9rem}.wiz-progress span{display:block;height:100%;width:0;background:var(--gold);transition:width .25s}
+.scale-key{display:grid;grid-template-columns:repeat(4,1fr);gap:.5rem;margin:.2rem 0 1rem;font-size:.72rem;line-height:1.35;color:var(--grey)}.scale-key b{display:block;color:var(--navy);font-size:.74rem}
+@media(max-width:560px){.scale-key{grid-template-columns:1fr 1fr}}
 </style>
 <link rel="stylesheet" href="/kept.css">
 <meta name="description" content="Take the free CONTROL Diagnostic: a 4-minute project health check with an instant Level 1 to 5 score across five delivery controls.">
@@ -80,19 +83,19 @@ footer a{color:rgba(255,255,255,.7);text-decoration:none;}
 </head>
 <body>
 
-<nav class="top"><div class="wrap"><a href="/index.html" class="logo"><b>Contracks Global<span>.</span></b></a><a href="/control.html" class="back">&larr; Back to CONTROL</a></div></nav>
+<nav class="top"><div class="wrap"><a href="/index.html" class="logo"><b>Contracks Global<span>.</span></b></a><a href="/control.html" class="back">&larr; Back to the diagnostic</a></div></nav>
 
 <div class="wrap">
   <div class="intro">
-    <span class="label">Delivery Control Readiness Assessment</span>
-    <h1>How close are you to <em>No-Surprises Delivery?</em></h1>
-    <p>20 questions. About 4 minutes. No jargon, no PMO language — just whether your delivery system actually holds. Your score is shown only to you.</p>
+    <span class="label">CONTROL Diagnostic</span>
+    <h1>Find your level on <em>The Delivery Control Ladder&trade;</em></h1>
+    <p>20 questions. About 4 minutes. Answer based on what can be demonstrated today, not what the procedure says should happen. Your score is shown only to you.</p>
   </div>
 
-  <form id="assessment">
+  <form id="assessment" data-track-view="assessment_started">
 
     <div class="wiz-head">
-      <div class="wiz-bar" id="wizSegments"></div>
+      <div class="wiz-progress" role="progressbar" aria-valuemin="0" aria-valuemax="20" id="wizProgress"><span id="wizFill"></span></div><div class="wiz-bar" id="wizSegments"></div>
       <div class="wiz-meta"><span class="wiz-section" id="wizSection"></span><span class="wiz-count" id="wizCount"></span></div>
     </div>
 
@@ -122,7 +125,7 @@ footer a{color:rgba(255,255,255,.7);text-decoration:none;}
       <h2>Command</h2><div class="pdesc">Is there one real plan?</div>
       <div class="q" data-q="q4"><div class="qtext">There is one working plan that reflects how the work actually happens.</div>
         <div class="scale"><label><input type="radio" name="q4" value="0">Not yet</label><label><input type="radio" name="q4" value="1">Partly</label><label><input type="radio" name="q4" value="2">Mostly</label><label><input type="radio" name="q4" value="3">Fully</label></div></div>
-      <div class="q" data-q="q5"><div class="qtext">The reported plan and the operational reality are the same.</div>
+      <div class="q" data-q="q5"><div class="qtext">If someone checked your project tomorrow, the work on site would match the schedule presented to management.</div>
         <div class="scale"><label><input type="radio" name="q5" value="0">Not yet</label><label><input type="radio" name="q5" value="1">Partly</label><label><input type="radio" name="q5" value="2">Mostly</label><label><input type="radio" name="q5" value="3">Fully</label></div></div>
       <div class="q" data-q="q6"><div class="qtext">Interfaces between teams, suppliers, locations, or partners have one clear owner.</div>
         <div class="scale"><label><input type="radio" name="q6" value="0">Not yet</label><label><input type="radio" name="q6" value="1">Partly</label><label><input type="radio" name="q6" value="2">Mostly</label><label><input type="radio" name="q6" value="3">Fully</label></div></div>
@@ -153,11 +156,11 @@ footer a{color:rgba(255,255,255,.7);text-decoration:none;}
     <!-- CONTROL -->
     <div class="pillar-block">
       <h2>Control</h2><div class="pdesc">Do we see problems early?</div>
-      <div class="q" data-q="q13"><div class="qtext">There is a fixed control cadence with the same inputs, outputs, and accountability every cycle.</div>
+      <div class="q" data-q="q13"><div class="qtext">You run a fixed control meeting with the same inputs, outputs and accountability every cycle.</div>
         <div class="scale"><label><input type="radio" name="q13" value="0">Not yet</label><label><input type="radio" name="q13" value="1">Partly</label><label><input type="radio" name="q13" value="2">Mostly</label><label><input type="radio" name="q13" value="3">Fully</label></div></div>
       <div class="q" data-q="q14"><div class="qtext">Slippage is caught early through the cadence, not discovered late in reporting.</div>
         <div class="scale"><label><input type="radio" name="q14" value="0">Not yet</label><label><input type="radio" name="q14" value="1">Partly</label><label><input type="radio" name="q14" value="2">Mostly</label><label><input type="radio" name="q14" value="3">Fully</label></div></div>
-      <div class="q" data-q="q15"><div class="qtext">For any issue, we can show cause → impact → recovery action.</div>
+      <div class="q" data-q="q15"><div class="qtext">For any current issue, we can show its cause, its impact and the recovery action.</div>
         <div class="scale"><label><input type="radio" name="q15" value="0">Not yet</label><label><input type="radio" name="q15" value="1">Partly</label><label><input type="radio" name="q15" value="2">Mostly</label><label><input type="radio" name="q15" value="3">Fully</label></div></div>
       <div class="q" data-q="q16"><div class="qtext">If a serious problem were forming right now, we would see it early enough to act before it became a crisis.</div>
         <div class="scale"><label><input type="radio" name="q16" value="0">Not yet</label><label><input type="radio" name="q16" value="1">Partly</label><label><input type="radio" name="q16" value="2">Mostly</label><label><input type="radio" name="q16" value="3">Fully</label></div></div>
@@ -231,13 +234,23 @@ footer a{color:rgba(255,255,255,.7);text-decoration:none;}
   function requiredNames(block){var o={};block.querySelectorAll('input[type=radio]').forEach(function(r){if(/^q\d+$/.test(r.name)||r.name==='domain'||r.name==='concern')o[r.name]=1;});return Object.keys(o);}
   function missingIn(block){var m=[];requiredNames(block).forEach(function(n){if(!block.querySelector('input[name="'+n+'"]:checked'))m.push(n);});return m;}
 
+  var ALLQ=[];for(var qi=1;qi<=20;qi++)ALLQ.push('q'+qi);
+  function updateCount(){
+    var done=ALLQ.filter(function(n){return val(n)!==null;}).length;
+    var b=steps[cur],inGroup=b.querySelectorAll('.q').length;
+    document.getElementById('wizCount').textContent=inGroup?('Question '+Math.min(done+1,20)+' of 20'):(done===20?'All 20 answered':'');
+    document.getElementById('wizFill').style.width=(done/20*100)+'%';
+    document.getElementById('wizProgress').setAttribute('aria-valuenow',done);
+  }
+  form.addEventListener('change',updateCount);
+  steps.forEach(function(s){if(s.querySelector('.q')){var k=document.createElement('div');k.className='scale-key';k.innerHTML='<span><b>Not yet</b>We can\u2019t show this.</span><span><b>Partly</b>Sometimes, not reliably.</span><span><b>Mostly</b>Usually, with exceptions.</span><span><b>Fully</b>We can show it today.</span>';s.insertBefore(k,s.querySelector('.q'));}});
   function render(){
     steps.forEach(function(s,i){s.classList.toggle('active',i===cur);});
     var cp=phaseOfStep(cur);
     Array.prototype.forEach.call(segWrap.children,function(seg,i){seg.classList.toggle('done',i<=cp&&i<4);seg.classList.toggle('active',i===cp);});
     var b=steps[cur], h=b.querySelector('h2');
     document.getElementById('wizSection').textContent=h?h.textContent:'';
-    document.getElementById('wizCount').textContent='';
+    updateCount();
     prevBtn.style.visibility=(cur===0)?'hidden':'visible';
     nextBtn.textContent=(cur===steps.length-1)?'See my results \u2192':'Continue \u2192';
     err.textContent='';
@@ -274,8 +287,10 @@ footer a{color:rgba(255,255,255,.7);text-decoration:none;}
     function one(q){return Math.round(val(q)/3*100);}
     var resSum=0;['q17','q18','q19','q20'].forEach(function(q){resSum+=val(q);});
     var resilience=Math.round(resSum/12*100);
+    var answers=diag.map(function(q){return val(q);}).join('');
+    if(window.cksTrack)cksTrack('assessment_completed');
     var params=new URLSearchParams({
-      s:overall, contain:p.contain, command:p.command, close:p.close, confirm:p.confirm, control:p.control,
+      a:answers, s:overall, contain:p.contain, command:p.command, close:p.close, confirm:p.confirm, control:p.control,
       res:resilience, crisis:one('q16'), keyp:one('q17'), assume:one('q18'), hand:one('q19'), scale:one('q20'),
       domain:(domEl?domEl.value:''), cap:sel('cap'), sector:sel('sector'), role:sel('role'), stage:sel('stage'), concern:concern
     });
@@ -285,5 +300,6 @@ footer a{color:rgba(255,255,255,.7);text-decoration:none;}
   render();
 })();
 </script>
+<script src="/dcl.js" defer></script>
 </body>
 </html>
