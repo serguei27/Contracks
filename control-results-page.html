@@ -521,6 +521,7 @@ footer a:hover{color:var(--gold);}
   document.getElementById('expAction').textContent=lowestAnswerAction(low.k);
   var crit=scored.filter(function(p){return p.v<35;});
   if(crit.length&&lvl.n>=3){var cb=document.getElementById('critBox');cb.style.display='block';
+    document.getElementById('heroMeaning').textContent+=' One discipline needs separate attention: see your principal exposure below.';
     cb.innerHTML='<b>A strong average can hide a weak spot.</b> Your overall level is '+lvl.name+', but '+crit.map(function(p){return PILLARS[p.k].name+' scored '+p.v;}).join(' and ')+'. Your level stays the same, and this needs separate attention.';}
   document.getElementById('discussBtn').href='/index.html?'+new URLSearchParams({plan:'reset',s:data.overall,contain:data.pillars.contain,command:data.pillars.command,close:data.pillars.close,confirm:data.pillars.confirm,control:data.pillars.control}).toString()+'#book';
   document.getElementById('discussBtn').addEventListener('click',function(){if(window.cksTrack)cksTrack('review_cta_clicked');});
