@@ -26,3 +26,4 @@
 .site-foot p{margin:8px 0 12px}
 @media (max-width:760px){.site-top .links{display:none}.site-top .cta{padding:10px 16px;font-size:.85rem}.site-top .cta .lg{display:none}.site-top .cta .sm{display:inline}.call-block .in{padding:26px 20px}}
 @media print{.site-top,.site-foot,.call-block{display:none}}
+.site-top .cta{background:#C5A050!important;color:#0A1628!important}
