@@ -5,6 +5,123 @@
 [functions]
   node_bundler = "esbuild"
 
+# Articles on hold (owner, 2026-11-05): keep the files, do not show them. Remove these rules to restore.
+[[redirects]]
+  from = "/articles/l2-article3"
+  to = "/library"
+  status = 302
+  force = true
+[[redirects]]
+  from = "/articles/l2-article3.html"
+  to = "/library"
+  status = 302
+  force = true
+[[redirects]]
+  from = "/audio/l2-article3.mp3"
+  to = "/library"
+  status = 302
+  force = true
+[[redirects]]
+  from = "/audio/l2-article3.sentences.json"
+  to = "/library"
+  status = 302
+  force = true
+[[redirects]]
+  from = "/articles/l2-article8"
+  to = "/library"
+  status = 302
+  force = true
+[[redirects]]
+  from = "/articles/l2-article8.html"
+  to = "/library"
+  status = 302
+  force = true
+[[redirects]]
+  from = "/audio/l2-article8.mp3"
+  to = "/library"
+  status = 302
+  force = true
+[[redirects]]
+  from = "/audio/l2-article8.sentences.json"
+  to = "/library"
+  status = 302
+  force = true
+[[redirects]]
+  from = "/articles/l2-article9"
+  to = "/library"
+  status = 302
+  force = true
+[[redirects]]
+  from = "/articles/l2-article9.html"
+  to = "/library"
+  status = 302
+  force = true
+[[redirects]]
+  from = "/audio/l2-article9.mp3"
+  to = "/library"
+  status = 302
+  force = true
+[[redirects]]
+  from = "/audio/l2-article9.sentences.json"
+  to = "/library"
+  status = 302
+  force = true
+[[redirects]]
+  from = "/articles/l5-article4"
+  to = "/library"
+  status = 302
+  force = true
+[[redirects]]
+  from = "/articles/l5-article4.html"
+  to = "/library"
+  status = 302
+  force = true
+[[redirects]]
+  from = "/audio/l5-article4.mp3"
+  to = "/library"
+  status = 302
+  force = true
+[[redirects]]
+  from = "/audio/l5-article4.sentences.json"
+  to = "/library"
+  status = 302
+  force = true
+[[redirects]]
+  from = "/articles/l5-article5"
+  to = "/library"
+  status = 302
+  force = true
+[[redirects]]
+  from = "/articles/l5-article5.html"
+  to = "/library"
+  status = 302
+  force = true
+[[redirects]]
+  from = "/audio/l5-article5.mp3"
+  to = "/library"
+  status = 302
+  force = true
+[[redirects]]
+  from = "/audio/l5-article5.sentences.json"
+  to = "/library"
+  status = 302
+  force = true
+[[redirects]]
+  from = "/assets/l2-article3.jpeg"
+  to = "/library"
+  status = 302
+  force = true
+[[redirects]]
+  from = "/assets/l2-article8.jpeg"
+  to = "/library"
+  status = 302
+  force = true
+[[redirects]]
+  from = "/assets/l2-article9.jpeg"
+  to = "/library"
+  status = 302
+  force = true
+
 # Old article addresses
 [[redirects]]
   from = "/articles/level1/*"
