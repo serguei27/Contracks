@@ -51,9 +51,9 @@
     +'<form id="wallForm" name="library-access" method="POST"><label class="wall-trap">Leave empty <input type="text" name="bot-field" tabindex="-1" autocomplete="off"></label>'
     +'<label>Name<input type="text" name="name" required autocomplete="name"></label>'
     +'<label>Work email<input type="email" name="email" required autocomplete="email"></label>'
-    +'<label class="tick"><input type="checkbox" name="keep_in_touch" value="yes"><span>Keep in touch: send me the Contracks Global newsletter.</span></label>'
+    +'<label class="tick"><input type="checkbox" name="keep_in_touch" value="yes"><span>Keep in touch: you can email me news from Contracks Global.</span></label>'
     +'<button type="submit">Get free access &rarr;</button>'
-    +'<small>Free. No payment. Unsubscribe at any time. See our <a href="/privacy.html">privacy policy</a>.</small></form>';
+    +'<small>Free. No payment. Unsubscribe at any time. See our <a href="/privacy.html">privacy policy</a>. Prefer LinkedIn? <a href="https://www.linkedin.com/in/serguei-poppeleer" target="_blank" rel="noopener">Follow The System Travels</a>.</small></form>';
     body.parentNode.insertBefore(panel,body.nextSibling);
     function open(){
       try{localStorage.setItem(KEY,'member');GATES.forEach(function(g){localStorage.setItem('cks_gate_'+g,'unlocked');});}catch(e){}
