@@ -153,6 +153,7 @@ footer a:hover{color:var(--gold);}
 .exp-text{font-size:1.1rem;max-width:720px;margin:0 auto 1.6rem;text-align:center}.exp-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}.exp-card{background:#fff;border:1px solid #E6E9EF;border-radius:10px;padding:1.4rem}.exp-card.gold{border-top:3px solid var(--gold)}.exp-card .label{margin-bottom:.5rem;font-size:.7rem}.crit{background:#fff;border-left:4px solid #B4533C;padding:1rem 1.2rem;border-radius:4px;margin-bottom:1.8rem;font-size:.96rem}.crit b{color:#8A3B2A}
 .discuss-h{color:#fff;font-size:clamp(1.5rem,3.5vw,2.1rem);margin-bottom:.8rem}.discuss-p{color:rgba(255,255,255,.8);margin-bottom:1.4rem}.tick{display:flex;gap:.6rem;align-items:flex-start;font-size:.86rem;margin:.2rem 0 .9rem;text-align:left;color:var(--grey)}.tick input{margin-top:3px;flex:none}
 @media(max-width:700px){.exp-grid{grid-template-columns:1fr}}
+.hero-exp{margin:.5rem auto 0;color:#fff;font-size:1rem}.hero-exp b{color:#D4B470}
 </style>
 <link rel="stylesheet" href="/kept.css">
 <meta name="robots" content="noindex">
@@ -170,6 +171,7 @@ footer a:hover{color:var(--gold);}
   <h1 id="heroH1">Governance is in place. Real <em>control</em> isn't — yet.</h1>
   <p class="meaning" id="heroMeaning">At this level the framework exists, but the live status lives off-system. Right now, the deck and the site disagree.</p>
   <p class="level-sa" id="levelSA"></p>
+  <p class="hero-exp" id="heroExp"></p>
   <div class="res-readout" id="resReadout"></div>
   <p class="self-note">Based on your own answers. This is a self-assessment, not an audit of your project.</p>
 </section>
@@ -517,6 +519,7 @@ footer a:hover{color:var(--gold);}
   var low=ranked[0];
   document.getElementById('expHead').innerHTML=(low.v<65?'Your principal exposure may be ':'Your lowest-scoring discipline is ')+'<em>'+EXPNAME[low.k]+'.</em>';
   document.getElementById('expText').textContent=low.v<65?EXPTEXT[low.k]:'No discipline scored below the stronger band. This is where to look first to protect what you have.';
+  document.getElementById('heroExp').innerHTML=(low.v<65?'Principal potential exposure: ':'Lowest-scoring discipline: ')+'<b>'+EXPNAME[low.k]+'</b>';
   document.getElementById('expNext').textContent=EXPNEXT[low.k];
   document.getElementById('expAction').textContent=lowestAnswerAction(low.k);
   var crit=scored.filter(function(p){return p.v<35;});
