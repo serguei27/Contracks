@@ -32,3 +32,27 @@
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',ready);else ready();
 })();
+
+/* Example scorecards: the score counts up and the five-C bars fill once, when the card scrolls into view,
+   eased as on Ask Contracks. Final values stay in the HTML, so reduced motion or no JS shows them as they are. */
+(function(){
+  if(!('IntersectionObserver' in window))return;
+  if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var ease=function(k){return 1-Math.pow(1-k,3);};
+  function run(card){
+    var bars=[].map.call(card.querySelectorAll('.dcl-bar'),function(b){var u=b.querySelector('u'),em=b.querySelector('em');return {u:u,em:em,to:parseFloat(u.style.width)||0};});
+    var num=card.querySelector('.dcl-lvl b, .cr-score span'),ring=card.querySelector('.cr-score'),to=num?parseInt(num.textContent,10)||0:0;
+    var set=function(k){
+      bars.forEach(function(b){var v=Math.round(b.to*k);b.u.style.width=v+'%';if(b.em)b.em.textContent=v+'%';});
+      if(num){var v=Math.round(to*k);num.textContent=v;if(ring)ring.style.background='conic-gradient(var(--gold) 0 '+v+'%,#EEF0F4 '+v+'% 100%)';}
+    };
+    set(0);
+    var o=new IntersectionObserver(function(e){
+      if(!e[0].isIntersecting)return;o.disconnect();
+      var t0=performance.now();(function f(t){var k=Math.min(1,(t-t0)/1100);set(ease(k));if(k<1)requestAnimationFrame(f);else set(1);})(t0);
+    },{threshold:.35});
+    o.observe(card);
+  }
+  function ready(){[].forEach.call(document.querySelectorAll('.dcl-res, .cr-wrap .dcl-card'),function(c){if(c.querySelector('.dcl-bar'))run(c);});}
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',ready);else ready();
+})();
