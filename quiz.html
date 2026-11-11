@@ -137,6 +137,53 @@
   .print-foot{position:fixed;bottom:-12mm;left:0;right:0;text-align:center;font-size:9pt;color:#5A6476}
   .bar i,.rail .col i{-webkit-print-color-adjust:exact;print-color-adjust:exact}
 }
+/* Situation picker with an animated example result */
+.inv{background:var(--navy);color:#fff;padding:72px 0}
+.inv-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:56px;align-items:center}
+.inv .eyebrow{font-size:.76rem;font-weight:700;letter-spacing:.14em;color:var(--gold-2)}
+.inv h2{color:#fff;font-size:clamp(1.9rem,4vw,2.7rem);margin:14px 0}
+.inv h2 em{color:var(--gold-2)}
+.inv .lead{color:rgba(255,255,255,.78);max-width:520px}
+.inv .ask{font-weight:700;margin:26px 0 12px}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chips button{min-height:44px;padding:10px 18px;border-radius:999px;border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;font:inherit;font-weight:600;font-size:.94rem;cursor:pointer;transition:background .2s,border-color .2s,color .2s}
+.chips button:hover{border-color:var(--gold-2)}
+.chips button[aria-pressed="true"]{background:var(--gold);border-color:var(--gold);color:var(--navy)}
+.chips button:focus-visible,.inv .btn:focus-visible{outline:2px solid var(--gold-2);outline-offset:3px}
+.inv .btn-navy{border:1px solid rgba(197,160,80,.6);margin-top:26px}
+.inv .reass{margin-top:14px;font-size:.88rem;color:rgba(255,255,255,.7)}
+.ex{background:#fff;color:var(--ink);border-radius:20px;box-shadow:0 30px 70px rgba(0,0,0,.35);overflow:hidden}
+.ex-top{display:flex;align-items:center;gap:8px;padding:12px 16px;border-bottom:1px solid var(--line);font-size:.84rem;font-weight:600;color:var(--navy)}
+.ex-top i{width:9px;height:9px;border-radius:50%;background:var(--line)}
+.ex-top span{flex:1;margin-left:6px}
+.ex-top em{font-style:normal;font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#8C6D25;border:1px solid var(--gold-line);border-radius:999px;padding:3px 9px}
+.ex-body{padding:20px}
+.ex-head{display:grid;grid-template-columns:150px minmax(0,1fr);gap:18px;align-items:center}
+.gauge{position:relative;width:150px;height:84px}
+.gauge svg{width:150px;height:84px;display:block}
+.gauge .trk{fill:none;stroke:var(--line);stroke-width:12;stroke-linecap:round}
+.gauge .val{fill:none;stroke:var(--gold);stroke-width:12;stroke-linecap:round;stroke-dasharray:198;stroke-dashoffset:198;transition:stroke-dashoffset .9s ease}
+.gauge b{position:absolute;left:0;right:0;bottom:0;text-align:center;font-family:'Playfair Display',serif;font-size:2.1rem;line-height:1;color:var(--navy)}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.tile{border:1px solid var(--line);border-radius:12px;padding:10px 12px;font-size:.8rem;color:var(--muted)}
+.tile b{display:block;font-size:1.05rem;color:#2D6A4F}
+.tile.fx b{color:#8C6D25}
+.ex-band{font-size:.8rem;font-weight:700;color:var(--navy);margin-bottom:8px}
+.cbars{margin-top:16px;display:grid;gap:7px}
+.cbars div{display:grid;grid-template-columns:86px 1fr 38px;gap:10px;align-items:center;font-size:.74rem;font-weight:700;letter-spacing:.06em;color:var(--navy)}
+.cbars s{display:block;height:8px;border-radius:4px;background:var(--line);overflow:hidden;text-decoration:none}
+.cbars u{display:block;height:100%;width:0;border-radius:4px;transition:width .8s ease,background-color .3s}
+.cbars em{font-style:normal;color:var(--muted);text-align:right}
+.fixes{margin-top:16px;display:grid;gap:8px}
+.fix{border:1px solid var(--line);border-radius:12px;padding:10px 12px;font-size:.82rem;line-height:1.45;opacity:1;transform:none;transition:opacity .45s ease,transform .45s ease}
+.fix.pre{opacity:0;transform:translateY(8px)}
+.fix b{display:block;color:var(--navy);margin-bottom:3px}
+.fix .self{color:#2D6A4F}.fix .help{color:#8C6D25}
+.fix svg{width:13px;height:13px;vertical-align:-2px;margin-right:4px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.inv-told{margin:0 0 16px;padding:12px 16px;border-left:4px solid var(--gold);border-radius:0 12px 12px 0;background:#fff;box-shadow:0 0 0 1px var(--line) inset;font-weight:600;color:var(--navy)}
+@media (max-width:900px){.inv-grid{grid-template-columns:minmax(0,1fr);gap:32px}}
+@media (max-width:700px){.inv{padding:52px 0}.chips{gap:8px}.chips button{padding:10px 13px;font-size:.86rem}.cbars{display:none}.fix:nth-child(3){display:none}.ex-head{grid-template-columns:minmax(0,1fr)}.gauge{margin:0 auto}}
+@media (prefers-reduced-motion:reduce){.gauge .val,.cbars u,.fix,.chips button{transition:none}}
 /* How the score works, as on the Ask Contracks quiz page */
 /* HOW THE SCORE WORKS (landing) */
 .how{max-width:1080px;margin:0 auto;padding:0 20px 88px}
@@ -258,19 +305,38 @@
 <div class="land">
   <div>
     <span class="pill">Delivery Score &middot; free</span>
-    <h1>How close is your programme to <em>No-Surprises Delivery?</em></h1>
-    <p class="sub">15 Yes/No questions on the 5Cs Framework&trade;, then 5 about your situation. You see your Delivery Score straight away.</p>
+    <h1>Could your next slipped date or open decision <em>cost more than you expect?</em></h1>
+    <p class="sub">Find out how close your programme is to No-Surprises Delivery, before a slipping date turns political.</p>
     <div class="start-wrap"><button type="button" class="btn btn-navy ac-pulse" id="startBtn">Start my Delivery Score</button><span class="free-tag">FREE</span></div>
-    <p class="land-note">About 4 minutes &middot; No email needed to see your score</p>
+    <p class="land-note">About 4 minutes &middot; No documents needed &middot; Results on screen &middot; No sales call unless you ask</p>
     <p class="land-note">15 Yes/No questions on the 5Cs Framework&trade;, plus 5 about your situation. An indicative self-assessment, not an audit of your programme.</p>
   </div>
   <div class="getbox">
     <div class="t">What you get</div>
-    <div class="getrow"><i>1</i><div><b>Your score out of 100</b><span>And your band: Fragile, Exposed or Resilient.</span></div></div>
-    <div class="getrow"><i>2</i><div><b>Your level</b><span>Where you sit on The Delivery Control Ladder&trade;.</span></div></div>
-    <div class="getrow"><i>3</i><div><b>Your weakest control</b><span>Which of the five Cs to look at first, and why it matters.</span></div></div>
+    <div class="getrow"><i>1</i><div><b>Your Delivery Score</b><span>Out of 100, whether your controls appear Fragile, Exposed or Resilient, and your level on The Delivery Control Ladder&trade;.</span></div></div>
+    <div class="getrow"><i>2</i><div><b>Your potential weak points</b><span>Which delivery controls may leave your programme exposed, and why it matters.</span></div></div>
+    <div class="getrow"><i>3</i><div><b>Your first corrective actions</b><span>Where to focus before the drift reaches the board. Part of your free full report.</span></div></div>
   </div>
 </div>
+<section class="inv" id="invite" aria-labelledby="inv-h"><div class="wrap inv-grid">
+<div>
+<span class="eyebrow">DELIVERY SCORE &middot; FREE</span>
+<h2 id="inv-h">How much control do you <em>really</em> have?</h2>
+<p class="lead">In about 4 minutes, see what&rsquo;s working, what to fix first, and the simplest way to fix it: on your own or with help.</p>
+<p class="ask" id="inv-ask">Where is your programme right now?</p>
+<div class="chips" role="group" aria-labelledby="inv-ask" id="invChips"></div>
+<button type="button" class="btn btn-navy ac-pulse" data-start-quiz id="invStart">Start my Delivery Score &rarr;</button>
+<p class="reass">About 4 minutes &middot; No documents needed &middot; Results on screen &middot; No sales call unless you ask</p>
+</div>
+<div class="ex" aria-live="polite">
+<div class="ex-top"><i></i><i></i><i></i><span id="exTitle">Your result</span><em>Example</em></div>
+<div class="ex-body">
+<div class="ex-head"><div class="gauge" role="img" id="exGauge" aria-label="Example score"><svg viewBox="0 0 150 84" aria-hidden="true"><path class="trk" d="M12 78a63 63 0 0 1 126 0"/><path class="val" id="exArc" d="M12 78a63 63 0 0 1 126 0"/></svg><b id="exScore">0</b></div>
+<div><div class="ex-band" id="exBand">Delivery Score</div><div class="tiles"><div class="tile"><b id="exWork">0 of 15</b>working</div><div class="tile fx"><b id="exFix">0</b>to fix</div></div></div></div>
+<div class="cbars" id="exBars"></div>
+<div class="fixes" id="exFixes"></div>
+</div></div>
+</div></section>
 </section>
 <div id="howScore" class="how">
 <section class="how-block" aria-labelledby="how-h">
@@ -392,7 +458,7 @@
       <input type="hidden" name="contain"><input type="hidden" name="command"><input type="hidden" name="close"><input type="hidden" name="confirm"><input type="hidden" name="control"><input type="hidden" name="weakest_c">
       <input type="hidden" name="answers">
       <input type="hidden" name="q16"><input type="hidden" name="q17"><input type="hidden" name="q18"><input type="hidden" name="q18_other"><input type="hidden" name="q19"><input type="hidden" name="q20">
-      <input type="hidden" name="fit"><input type="hidden" name="review_flag">
+      <input type="hidden" name="fit"><input type="hidden" name="review_flag"><input type="hidden" name="situation_picked">
       <input type="hidden" name="engine_version"><input type="hidden" name="config_version"><input type="hidden" name="score_version">
       <p class="hp" hidden style="display:none" aria-hidden="true"><label>Leave empty: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
       <div class="row">
@@ -450,7 +516,7 @@
 <input type="hidden" name="plan">
 <input type="hidden" name="score_name"><input type="hidden" name="score"><input type="hidden" name="band"><input type="hidden" name="level"><input type="hidden" name="contain"><input type="hidden" name="command"><input type="hidden" name="close"><input type="hidden" name="confirm"><input type="hidden" name="control"><input type="hidden" name="weakest_c">
 <input type="hidden" name="q16"><input type="hidden" name="q17"><input type="hidden" name="q18"><input type="hidden" name="q18_other"><input type="hidden" name="q19"><input type="hidden" name="q20">
-<input type="hidden" name="fit"><input type="hidden" name="review_flag"><input type="hidden" name="engine_version"><input type="hidden" name="config_version"><input type="hidden" name="score_version">
+<input type="hidden" name="fit"><input type="hidden" name="review_flag"><input type="hidden" name="situation_picked"><input type="hidden" name="engine_version"><input type="hidden" name="config_version"><input type="hidden" name="score_version">
 <p class="hp" hidden style="display:none" aria-hidden="true"><label>Leave empty: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
 <h3 class="cform-h">Let&rsquo;s talk.</h3>
 <p class="cform-sub">Leave your details and we&rsquo;ll get in touch.</p>
@@ -500,5 +566,6 @@
 <script src="contact-form.js"></script>
 <script src="quiz.js"></script>
 <script src="quiz-demo.js"></script>
+<script src="quiz-invite.js"></script>
 </body>
 </html>
