@@ -144,6 +144,16 @@
   status = 301
   force = true
 [[redirects]]
+  from = "/control"
+  to = "/quiz"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/control.html"
+  to = "/quiz"
+  status = 301
+  force = true
+[[redirects]]
   from = "/control-review"
   to = "/#book"
   status = 301
