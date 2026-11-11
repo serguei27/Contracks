@@ -464,3 +464,4 @@ ol.after{list-style:none;counter-reset:a;margin-top:14px}
 form.is-sent .fgrid,form.is-sent button[type=submit]{opacity:.55}
 .score-head{padding:72px 0 0}.score-head .head{margin-bottom:40px}
 .dcl-dark .dcl-top>.pill+p{margin-top:14px}
+.grid3.grid2{grid-template-columns:repeat(2,1fr)}@media (max-width:900px){.grid3.grid2{grid-template-columns:1fr}}
