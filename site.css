@@ -470,9 +470,10 @@ form.is-sent .fgrid,form.is-sent button[type=submit]{opacity:.55}
 .plans-cta{text-align:center;margin-top:28px}.plans-cta .btn{white-space:nowrap;min-width:320px}@media (max-width:480px){.plans-cta .btn{width:100%;min-width:0;font-size:.92rem;padding:15px 12px}}
 .plans.plans4{grid-template-columns:repeat(4,1fr)}.plans4 .plan{padding:30px 24px}.plans4 .price{font-size:clamp(1.9rem,3vw,2.3rem)}@media (max-width:1200px){.plans.plans4{grid-template-columns:repeat(2,1fr)}}@media (max-width:700px){.plans.plans4{grid-template-columns:1fr}}
 .quote-line{color:var(--navy);font-weight:700;font-size:1.05rem;margin:0 0 14px}.plans-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-.work4 .svc{display:flex;flex-direction:column}.work4 .svc .chip{align-self:flex-start;margin:4px 0 10px}.work4 .svc p{flex:1}.work4 .svc .btn{margin-top:18px;align-self:flex-start;white-space:normal}
+.work4 .svc{display:flex;flex-direction:column}.work4 .svc .chip{align-self:flex-start;margin:4px 0 10px}.work4 .svc p{flex:1}.work4 .svc .btn{margin-top:18px;align-self:stretch;width:100%;justify-content:center;text-align:center;white-space:nowrap;padding-left:12px;padding-right:12px;font-size:.92rem}
 .flow-top{padding-bottom:28px}.flow-bottom{padding-top:28px}.flow-bottom .head{margin-bottom:28px}
 .grid4.flow4{grid-template-columns:repeat(4,1fr)}@media (max-width:1100px){.grid4.flow4{grid-template-columns:repeat(2,1fr)}}@media (max-width:640px){.grid4.flow4{grid-template-columns:1fr}}
 .flow4 .stage .go{color:var(--gold-2,var(--gold))}
 .flow4 .stage a.go{text-decoration:none}.flow4 .stage a.go:hover{text-decoration:underline}
 .work4 .svc{transition:box-shadow .25s,transform .25s}.work4 .svc.hl{box-shadow:0 0 0 3px var(--gold),0 18px 40px rgba(10,22,40,.12);transform:translateY(-4px)}
+.work4 .svc h3{min-height:2.6em;display:flex;align-items:flex-end}@media (max-width:640px){.work4 .svc h3{min-height:0}}
