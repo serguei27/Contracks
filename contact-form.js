@@ -80,7 +80,7 @@
         .catch(function () {
           sending = false;
           if (button) { button.disabled = false; button.textContent = buttonText; }
-          if (status) { status.className = 'form-status err'; status.textContent = 'Your message didn’t reach us. Please check your connection and press the button again, or email hello@contracks.global.'; }
+          if (status) { status.className = 'form-status err'; status.textContent = 'Your message didn’t reach us. Please check your connection and press the button again.'; }
         });
     });
 
