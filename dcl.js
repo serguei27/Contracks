@@ -14,14 +14,32 @@
   };
   function init(box){
     var panel=box.querySelector('.dcl-panel'),btns=[].slice.call(box.querySelectorAll('.dcl-step'));
+    var show=function(n){var l=LV[n];
+      panel.innerHTML='<b class="dcl-h">'+l.t+': '+l.h+'</b><p>'+l.d+'</p><dl><div><dt>See</dt><dd>'+l.s+'</dd></div><div><dt>Act</dt><dd>'+l.a+'</dd></div></dl><p class="dcl-test">Think you&rsquo;re at this level? Test it.</p><a class="btn btn-navy dcl-start ac-pulse" href="/quiz">Start my Delivery Score</a>';};
     btns.forEach(function(b){
       b.addEventListener('click',function(){
-        var n=b.getAttribute('data-level'),l=LV[n];
+        var n=b.getAttribute('data-level');
+        stop();
         btns.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});
-        panel.innerHTML='<b class="dcl-h">'+l.t+': '+l.h+'</b><p>'+l.d+'</p><dl><div><dt>See</dt><dd>'+l.s+'</dd></div><div><dt>Act</dt><dd>'+l.a+'</dd></div></dl><p class="dcl-test">Think you&rsquo;re at this level? Test it.</p><a class="btn btn-navy dcl-start ac-pulse" href="/quiz">Start my Delivery Score</a>';
+        show(n);
         cksTrack('ladder_level_selected',{level:n});
       });
     });
+    /* Animation, once in view: the steps rise one by one, then the ladder climbs level by level until the
+       visitor hovers, focuses or picks a level. Off-screen it pauses; with reduced motion it stays still. */
+    var timer=null,stopped=false,cur=0;
+    function stop(){stopped=true;clearInterval(timer);timer=null;btns.forEach(function(x){x.classList.remove('dcl-on');});panel.setAttribute('aria-live','polite');}
+    if(!('IntersectionObserver' in window)||(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches))return;
+    box.addEventListener('mouseenter',stop);box.addEventListener('focusin',stop);box.addEventListener('touchstart',stop,{passive:true});
+    box.classList.add('dcl-pre');
+    var climb=function(){cur=cur%5+1;btns.forEach(function(x){x.classList.toggle('dcl-on',+x.getAttribute('data-level')===cur);});show(cur);};
+    var risen=false;
+    new IntersectionObserver(function(e){
+      var v=e[0].isIntersecting;
+      if(v&&!risen){risen=true;box.classList.remove('dcl-pre');box.classList.add('dcl-rise');setTimeout(function(){box.classList.remove('dcl-rise');},1300);}
+      clearInterval(timer);timer=null;
+      if(v&&!stopped){panel.setAttribute('aria-live','off');timer=setInterval(climb,2400);setTimeout(function(){if(!stopped&&!cur)climb();},1300);}
+    },{threshold:.35}).observe(box);
   }
   function ready(){
     [].forEach.call(document.querySelectorAll('[data-dcl]'),init);
