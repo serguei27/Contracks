@@ -135,7 +135,7 @@ function buildHtml({ hi, report, articleUrl, pdfUrl }) {
           <p style="margin:0 0 14px;">${readBtn}</p>
           <p style="margin:0 0 24px;">${pdfBtn}</p>
           <p style="font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:1.6;color:#6B7280;margin:0 0 22px;">The link opens straight to the report — no need to enter your details again.</p>
-          <p style="font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.6;color:#1A1A1A;margin:0 0 22px;">When you're ready to see where your own programme sits, the CONTROL diagnostic takes about ten minutes: <a href="https://contracks.global/control" style="color:${GOLD};">contracks.global/control</a></p>
+          <p style="font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.6;color:#1A1A1A;margin:0 0 22px;">When you're ready to see where your own programme sits, your Delivery Score takes about four minutes: <a href="https://contracks.global/quiz" style="color:${GOLD};">contracks.global/quiz</a></p>
           <p style="font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:1.6;color:#6B7280;margin:0 0 28px;">You'll get occasional field notes on delivery governance — what actually holds on cross-border capital projects. No noise. Unsubscribe anytime.</p>
         </td></tr>
         <tr><td style="background:${NAVY};padding:24px 36px;">
@@ -162,7 +162,7 @@ function buildText({ hi, report, articleUrl, pdfUrl }) {
     "",
     "The link opens straight to the report — no need to enter your details again.",
     "",
-    "When you're ready, the CONTROL diagnostic takes about ten minutes: https://contracks.global/control",
+    "When you're ready, your Delivery Score takes about four minutes: https://contracks.global/quiz",
     "",
     "You'll get occasional field notes on delivery governance. No noise. Unsubscribe anytime.",
     "",
@@ -201,7 +201,7 @@ function buildNewsletterHtml({ hi }) {
     <p style="font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.6;color:#1A1A1A;margin:0 0 16px;">${hi}</p>
     <p style="font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.6;color:#1A1A1A;margin:0 0 16px;">Thank you for subscribing to <strong>The System Travels</strong> — field notes on what actually holds delivery together on cross-border capital programmes. Not theory. What works on site, where the systems break first.</p>
     <p style="font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.6;color:#1A1A1A;margin:0 0 22px;">It lands every three weeks. No noise, no filler — just the patterns I see repeat across 30 countries and 100+ programmes. You can unsubscribe at any time.</p>
-    <p style="font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.6;color:#1A1A1A;margin:0 0 22px;">While you wait for the first edition, the CONTROL diagnostic shows where your own programme sits in about ten minutes: <a href="https://contracks.global/control" style="color:${GOLD};">contracks.global/control</a></p>`;
+    <p style="font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.6;color:#1A1A1A;margin:0 0 22px;">While you wait for the first edition, your Delivery Score shows where your own programme sits in about four minutes: <a href="https://contracks.global/quiz" style="color:${GOLD};">contracks.global/quiz</a></p>`;
   return shell(inner);
 }
 
@@ -215,7 +215,7 @@ function buildNewsletterText({ hi }) {
     "",
     "It lands every three weeks. No noise, no filler — just the patterns I see repeat across 30 countries and 100+ programmes. You can unsubscribe at any time.",
     "",
-    "While you wait, the CONTROL diagnostic shows where your own programme sits in about ten minutes: https://contracks.global/control",
+    "While you wait, your Delivery Score shows where your own programme sits in about four minutes: https://contracks.global/quiz",
     "",
     "— Serguei Poppeleer",
     "Founder & Managing Director, Contracks Global",
@@ -231,7 +231,7 @@ function buildBookHtml({ hi }) {
     <p style="font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.6;color:#1A1A1A;margin:0 0 16px;">${hi}</p>
     <p style="font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.6;color:#1A1A1A;margin:0 0 16px;">Thank you for joining the waitlist for <strong>No-Surprises Delivery</strong> — the field manual for the person accountable for delivery in the markets where systems break first.</p>
     <p style="font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.6;color:#1A1A1A;margin:0 0 22px;">You'll be among the first to hear when it's ready, with early access ahead of general release. I'll only email you about the book — nothing else, unless you also subscribed to the field notes.</p>
-    <p style="font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.6;color:#1A1A1A;margin:0 0 22px;">In the meantime, the thinking behind the book runs through the CONTROL diagnostic — about ten minutes to see where your programme sits: <a href="https://contracks.global/control" style="color:${GOLD};">contracks.global/control</a></p>`;
+    <p style="font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.6;color:#1A1A1A;margin:0 0 22px;">In the meantime, the thinking behind the book runs through the Delivery Score — about four minutes to see where your programme sits: <a href="https://contracks.global/quiz" style="color:${GOLD};">contracks.global/quiz</a></p>`;
   return shell(inner);
 }
 
@@ -245,7 +245,7 @@ function buildBookText({ hi }) {
     "",
     "You'll be among the first to hear when it's ready, with early access ahead of general release. I'll only email you about the book — nothing else, unless you also subscribed to the field notes.",
     "",
-    "In the meantime, the thinking behind the book runs through the CONTROL diagnostic: https://contracks.global/control",
+    "In the meantime, the thinking behind the book runs through the Delivery Score: https://contracks.global/quiz",
     "",
     "— Serguei Poppeleer",
     "Founder & Managing Director, Contracks Global",

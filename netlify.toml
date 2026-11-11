@@ -122,6 +122,43 @@
   status = 302
   force = true
 
+# Delivery Score (v3.1, 11 Nov 2026): the quiz, results and report live at /quiz
+[[redirects]]
+  from = "/control-assessment"
+  to = "/quiz"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/control-assessment.html"
+  to = "/quiz"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/control-results-page"
+  to = "/quiz"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/control-results-page.html"
+  to = "/quiz"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/control-report"
+  to = "/quiz"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/control-report.html"
+  to = "/quiz"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/quiz.html"
+  to = "/quiz"
+  status = 301
+  force = true
+
 # Old article addresses
 [[redirects]]
   from = "/articles/level1/*"
@@ -167,7 +204,7 @@
   status = 301
 [[redirects]]
   from = "/resolve-assessment.html"
-  to = "/control-assessment"
+  to = "/quiz"
   status = 301
 [[redirects]]
   from = "/glossary.html"

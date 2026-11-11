@@ -438,3 +438,18 @@ ol.after{list-style:none;counter-reset:a;margin-top:14px}
 .lib-tabs{display:flex;justify-content:center;gap:6px;padding:14px 16px;border-bottom:1px solid var(--line);flex-wrap:wrap}.lib-tabs a{text-decoration:none;color:var(--navy);font-weight:700;font-size:.9rem;padding:8px 18px;border-radius:999px;border:1px solid var(--line)}.lib-tabs a.on{background:var(--navy);color:var(--gold-2);border-color:var(--navy)}
 .aff{max-width:1000px;margin:40px auto 0;text-align:center}.aff h3{font-size:1.15rem;margin-bottom:16px;color:var(--navy)}.aff-row{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.aff-row li{border:1px solid var(--line);border-radius:12px;padding:16px 12px;background:#fff}.aff-row b{display:block;font-family:"Playfair Display",serif;font-size:1.35rem;color:var(--navy);letter-spacing:.02em}.aff-row span{display:block;font-size:.78rem;color:var(--muted);margin-top:4px;line-height:1.35}.aff-note{font-size:.82rem;color:var(--muted);margin-top:12px}
 @media (max-width:760px){.aff-row{grid-template-columns:1fr 1fr}}
+
+/* Standard contact form (scorecard family v3.5) */
+.cform-h{font-size:1.6rem;margin-bottom:4px}
+.cform-sub{color:var(--muted);margin-bottom:18px}
+.cmethod{border:0;min-width:0}.cmethod legend{font-weight:600;font-size:.92rem;color:var(--navy);margin-bottom:8px}
+.cmethod-opts{display:flex;flex-wrap:wrap;gap:8px}
+.cmethod-opts label{display:inline-flex;gap:8px;align-items:center;border:1.5px solid #D5DAE3;border-radius:999px;padding:8px 14px;font-weight:500;cursor:pointer}
+.cmethod-opts label:has(input:checked){border-color:var(--navy);background:var(--gold-soft)}
+.cmethod-opts input{width:auto;accent-color:var(--navy)}
+.opt{font-weight:400;color:var(--muted)}
+.count{color:var(--muted);font-size:.78rem;text-align:right}
+.form-status{margin-top:12px;font-weight:600;font-size:.95rem;min-height:1.3em}
+.form-status.err{color:var(--red)}
+.form-status.ok{color:#2D6A4F}
+form.is-sent .fgrid,form.is-sent button[type=submit]{opacity:.55}

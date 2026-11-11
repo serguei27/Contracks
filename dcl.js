@@ -18,7 +18,7 @@
       b.addEventListener('click',function(){
         var n=b.getAttribute('data-level'),l=LV[n];
         btns.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});
-        panel.innerHTML='<b class="dcl-h">'+l.t+': '+l.h+'</b><p>'+l.d+'</p><dl><div><dt>See</dt><dd>'+l.s+'</dd></div><div><dt>Act</dt><dd>'+l.a+'</dd></div></dl><p class="dcl-test">Think you&rsquo;re at this level? Test it.</p><a class="btn btn-gold" href="control-assessment.html">Find my actual control level &rarr;</a>';
+        panel.innerHTML='<b class="dcl-h">'+l.t+': '+l.h+'</b><p>'+l.d+'</p><dl><div><dt>See</dt><dd>'+l.s+'</dd></div><div><dt>Act</dt><dd>'+l.a+'</dd></div></dl><p class="dcl-test">Think you&rsquo;re at this level? Test it.</p><a class="btn btn-gold" href="/quiz">Get my Delivery Score &mdash; free &rarr;</a>';
         cksTrack('ladder_level_selected',{level:n});
       });
     });

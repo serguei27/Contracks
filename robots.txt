@@ -1,7 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /control-results-page.html
-Disallow: /control-report.html
 Disallow: /thanks.html
 
 Sitemap: https://contracks.global/sitemap.xml

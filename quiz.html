@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Delivery Score: free delivery control check for capital programmes | Contracks Global</title>
+<meta name="description" content="Get your Delivery Score free: 15 Yes/No questions on the 5Cs Framework, about 4 minutes. Your score out of 100, your level on The Delivery Control Ladder and your weakest control.">
+<link rel="canonical" href="https://contracks.global/quiz">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Contracks Global">
+<meta property="og:title" content="Delivery Score | Contracks Global">
+<meta property="og:description" content="Get your Delivery Score free: 15 Yes/No questions on the 5Cs Framework, about 4 minutes.">
+<meta property="og:url" content="https://contracks.global/quiz">
+<meta property="og:image" content="https://contracks.global/assets/og-contracks.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+<style>
+.qz{background:var(--gold-soft);padding:56px 0 80px}
+.qz .wrap{max-width:780px}
+.qz h1{font-size:clamp(2rem,4.6vw,3rem);margin:16px 0 14px}
+.qz .sub{color:var(--muted);font-size:1.08rem;max-width:640px}
+.qz .facts{display:flex;flex-wrap:wrap;gap:8px 18px;margin:18px 0 26px;font-size:.92rem;color:var(--navy);font-weight:600}
+.payoffs{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:26px 0}
+.payoffs div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px}
+.payoffs b{display:block;font-family:'Playfair Display',serif;color:var(--navy);margin-bottom:4px}
+.payoffs p{font-size:.9rem;color:var(--muted)}
+.authority{display:flex;gap:16px;align-items:center;margin:24px 0;font-size:.92rem;color:var(--muted)}
+.authority img{width:58px;height:58px;border-radius:50%;object-fit:cover;flex:none}
+.faq-mini details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin-bottom:8px}
+.faq-mini summary{font-weight:700;cursor:pointer;color:var(--navy)}
+.faq-mini p{margin-top:8px;color:var(--muted);font-size:.95rem}
+.panel{background:#fff;border:1px solid var(--line);border-radius:18px;padding:30px;box-shadow:0 20px 50px rgba(10,22,40,.06)}
+.prog{display:flex;gap:6px;margin-bottom:10px}
+.prog span{flex:1;height:6px;border-radius:3px;background:var(--line)}
+.prog span.on{background:var(--gold)}
+.prog-meta{display:flex;justify-content:space-between;font-size:.8rem;color:var(--muted);margin-bottom:20px;font-weight:600;letter-spacing:.04em}
+.step{display:none}.step.active{display:block}
+.step h2{font-size:1.5rem;margin:4px 0 4px}
+.step .ck{font-size:.78rem;font-weight:700;letter-spacing:.14em;color:var(--navy-2);text-transform:uppercase}
+.step .hint{color:var(--muted);font-size:.92rem;margin-bottom:10px}
+.yn{padding:18px 0;border-top:1px solid var(--line)}
+.yn p{font-weight:500;margin-bottom:10px}
+.yn .opts{display:flex;gap:10px}
+.yn label,.choice label{position:relative;display:inline-flex;align-items:center;justify-content:center;border:1.5px solid #D5DAE3;border-radius:999px;padding:10px 26px;cursor:pointer;font-weight:600;font-size:.95rem;background:#fff}
+.yn input,.choice input{position:absolute;opacity:0;width:1px;height:1px}
+.yn label:has(input:checked),.choice label:has(input:checked){background:var(--navy);border-color:var(--navy);color:#fff}
+.yn label:has(input:focus-visible),.choice label:has(input:focus-visible){outline:2px solid var(--gold);outline-offset:2px}
+.yn.miss label{border-color:var(--red)}
+.choice{border:0;padding:14px 0;border-top:1px solid var(--line)}
+.choice legend{font-weight:600;margin-bottom:10px;color:var(--navy)}
+.choice .opts{display:flex;flex-wrap:wrap;gap:8px}
+.choice label{border-radius:12px;padding:9px 14px;font-weight:500;font-size:.9rem;justify-content:flex-start;text-align:left}
+.choice.miss legend{color:var(--red)}
+.qnav{display:flex;justify-content:space-between;align-items:center;margin-top:22px;gap:12px}
+.qnav .btn{width:auto}
+.err{color:var(--red);font-weight:600;font-size:.9rem;min-height:1.3em;margin-top:10px}
+.back{background:none;border:0;font:inherit;font-weight:700;color:var(--muted);cursor:pointer;padding:10px 4px}
+.res-head{display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:center}
+.big{font-family:'Playfair Display',serif;font-size:4.4rem;font-weight:900;color:var(--navy);line-height:1}
+.big small{display:block;font-family:'DM Sans';font-size:.72rem;letter-spacing:.14em;color:var(--muted);font-weight:700;margin-top:6px}
+.bandname{font-family:'Playfair Display',serif;font-size:1.7rem;color:var(--navy)}
+.levelname{font-weight:700;color:var(--navy-2);margin-top:2px}
+/* Band scale: one horizontal track in three zones, with a marker. Kept unlike the C rail below. */
+.bandscale{margin:22px 0 6px}
+.bandscale .track{position:relative;display:grid;grid-template-columns:40fr 30fr 30fr;height:14px;border-radius:999px;overflow:visible}
+.bandscale .track i{display:block}
+.bandscale .track i:nth-child(1){background:#E9B8AE;border-radius:999px 0 0 999px}
+.bandscale .track i:nth-child(2){background:#EED9A8}
+.bandscale .track i:nth-child(3){background:#B9D3C2;border-radius:0 999px 999px 0}
+.bandscale .mark{position:absolute;top:-7px;width:4px;height:28px;background:var(--navy);border-radius:2px;transform:translateX(-50%)}
+.bandscale .names{display:grid;grid-template-columns:40fr 30fr 30fr;font-size:.78rem;font-weight:700;color:var(--muted);margin-top:8px}
+.bandscale .names span.on{color:var(--navy)}
+/* Five-C rail: five navy columns, one per C. */
+.rail{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:26px 0 8px;align-items:end}
+.rail div{text-align:center}
+.rail .col{height:96px;background:var(--line);border-radius:8px;position:relative;overflow:hidden}
+.rail .col i{position:absolute;left:0;right:0;bottom:0;background:var(--navy)}
+.rail .weak .col i{background:var(--gold)}
+.rail b{display:block;font-size:.72rem;letter-spacing:.1em;margin-top:8px;color:var(--navy)}
+.rail span{font-size:.85rem;color:var(--muted)}
+.weakline{margin:16px 0;padding:14px 18px;border-left:4px solid var(--gold);background:var(--gold-soft);border-radius:0 12px 12px 0}
+.powered{font-size:.82rem;color:var(--muted);margin-top:18px;text-align:center}
+.post{margin-top:26px;padding:24px;border-radius:16px;background:var(--navy);color:#fff;text-align:center}
+.post p{margin-bottom:16px}
+.post .btn{width:auto}
+.post small{display:block;margin-top:10px;color:rgba(255,255,255,.7)}
+.unlock{margin-top:26px}
+.unlock h3{font-size:1.4rem;margin-bottom:6px}
+.unlock .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.consent{display:flex;gap:10px;align-items:flex-start;font-weight:500;font-size:.9rem;margin:6px 0 4px}
+.consent input{width:auto;margin-top:4px}
+.report{margin-top:26px}
+.report h3{font-size:1.25rem;margin:24px 0 10px}
+.report .meta{font-size:.82rem;color:var(--muted)}
+.report ol,.report ul{padding-left:20px}
+.report li{margin-bottom:8px}
+.cline{display:grid;grid-template-columns:110px 1fr;gap:14px;padding:12px 0;border-top:1px solid var(--line)}
+.cline b{color:var(--navy)}
+.bar{height:8px;background:var(--line);border-radius:4px;margin-top:6px;overflow:hidden}.bar i{display:block;height:100%;background:var(--navy)}
+.checklist li{list-style:none;position:relative;padding-left:26px}.checklist li::before{content:'☐';position:absolute;left:0;color:var(--navy)}
+.options{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+.options>div{border:1px solid var(--line);border-radius:14px;padding:20px}
+.options .lead-opt{border:2px solid var(--gold);background:var(--gold-soft)}
+.options .btn{width:auto;margin-top:10px}
+.report-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.report-actions .btn{width:auto}
+#call{margin-top:26px}
+.print-only{display:none}
+@media (max-width:700px){.payoffs,.options,.unlock .row{grid-template-columns:1fr}.res-head{grid-template-columns:1fr;gap:10px}.big{font-size:3.6rem}.panel{padding:22px}.rail{gap:6px}.rail b{font-size:.62rem}.cline{grid-template-columns:1fr;gap:4px}}
+@media print{
+  @page{size:A4;margin:16mm 14mm 20mm}
+  body{background:#fff}
+  nav.top,footer,.sticky,#intro,#quiz,#results,#unlock,#call,.no-print{display:none!important}
+  .qz{padding:0;background:#fff}
+  .panel{border:0;box-shadow:none;padding:0}
+  #report{display:block!important;margin:0}
+  .print-only{display:block}
+  .report h3{break-after:avoid}
+  .cline,.report li{break-inside:avoid}
+  .print-foot{position:fixed;bottom:-12mm;left:0;right:0;text-align:center;font-size:9pt;color:#5A6476}
+  .bar i,.rail .col i{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
+<body>
+<nav class="top">
+  <div class="wrap">
+    <a href="index.html" class="logo"><b>Contracks Global<span>.</span></b></a>
+    <div class="links" id="menu">
+      <a href="index.html#method">How It Works</a>
+      <a href="index.html#work">Services</a>
+      <a href="index.html#proof">Results</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="index.html#ladder">Delivery Score</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="library.html">Articles</a>
+    </div>
+    <a href="/quiz" class="btn btn-gold nav-cta" data-track="nav_score_cta"><span class="lg">Get my Delivery Score</span><span class="sm">Delivery Score</span></a>
+  </div>
+</nav>
+
+<main class="qz">
+<div class="wrap">
+
+<section id="intro">
+  <span class="pill">Delivery Score &middot; free</span>
+  <h1>How close is your programme to <em>No-Surprises Delivery?</em></h1>
+  <p class="sub">15 Yes/No questions on the 5Cs Framework&trade;, then 5 about your situation. You see your Delivery Score straight away.</p>
+  <div class="facts"><span>Free</span><span>About 4 minutes</span><span>No email needed to see your score</span></div>
+  <button type="button" class="btn btn-gold" id="startBtn">Get my Delivery Score &mdash; free &rarr;</button>
+  <div class="payoffs">
+    <div><b>Your score out of 100</b><p>And your band: Fragile, Exposed or Resilient.</p></div>
+    <div><b>Your level</b><p>Where you sit on The Delivery Control Ladder&trade;.</p></div>
+    <div><b>Your weakest control</b><p>Which of the five Cs to look at first, and why it matters.</p></div>
+  </div>
+  <div class="authority"><img src="assets/serguei-portrait.jpeg" alt="Serguei Poppeleer"><p>Built by Serguei Poppeleer, civil engineer with over 20 years on major construction and EPC contracts in Europe, Africa and the Gulf. MCIArb &middot; WorldCC &middot; LLM Construction Law &amp; Arbitration &middot; MSc Civil Engineering &middot; Executive MBA.</p></div>
+  <div class="faq-mini">
+    <details><summary>How long does it take?</summary><p>About 4 minutes: 15 Yes/No questions, then 5 short questions about your situation.</p></details>
+    <details><summary>Is it free?</summary><p>Yes. Your score shows straight away, with no email needed. Your email is only asked for if you want the detailed report.</p></details>
+    <details><summary>What do I get?</summary><p>Your Delivery Score out of 100, your band, your level on The Delivery Control Ladder&trade;, your five C scores and your weakest control. The detailed report adds three first actions and a five-line checklist, with a PDF copy.</p></details>
+    <details><summary>What happens after?</summary><p>Use the report to improve delivery control yourself, or book a free 45-minute call to go through your result. No documents needed, no obligation.</p></details>
+  </div>
+  <p style="margin-top:22px"><button type="button" class="btn btn-gold" id="startBtn2">Get my Delivery Score &mdash; free &rarr;</button></p>
+</section>
+
+<section id="quiz" hidden>
+  <div class="panel">
+    <div class="prog" id="prog" aria-hidden="true"></div>
+    <div class="prog-meta"><span id="progLabel"></span><span id="progCount"></span></div>
+    <form id="quizForm" novalidate>
+      <div id="steps"></div>
+      <p class="err" id="quizErr" role="alert"></p>
+      <div class="qnav"><button type="button" class="back" id="backBtn">&larr; Back</button><button type="button" class="btn btn-navy" id="nextBtn">Continue &rarr;</button></div>
+    </form>
+  </div>
+</section>
+
+<section id="results" hidden>
+  <div class="panel">
+    <span class="pill">Your Delivery Score</span>
+    <div class="res-head" style="margin-top:18px">
+      <div class="big"><span id="rTotal">0</span><small>OUT OF 100</small></div>
+      <div><div class="bandname" id="rBand"></div><div class="levelname" id="rLevel"></div></div>
+    </div>
+    <div class="bandscale" aria-label="Band scale">
+      <div class="track"><i></i><i></i><i></i><span class="mark" id="rMark"></span></div>
+      <div class="names"><span data-band="fragile">Fragile 0&ndash;39</span><span data-band="exposed">Exposed 40&ndash;69</span><span data-band="resilient">Resilient 70&ndash;100</span></div>
+    </div>
+    <div class="rail" id="rRail" aria-label="Your five C scores"></div>
+    <p class="weakline" id="rWeak"></p>
+    <p id="rInterp"></p>
+    <p class="powered">Powered by the 5Cs Framework&trade; &mdash; Fragile &middot; Exposed &middot; Resilient.</p>
+    <div class="post">
+      <p id="rCtaLine"></p>
+      <a href="#call" class="btn btn-gold" data-open-call>Book a Free 45-Minute Call &rarr;</a>
+      <small>No documents needed &middot; No obligation</small>
+    </div>
+  </div>
+</section>
+
+<section id="unlock" hidden>
+  <div class="panel unlock">
+    <h3>Want to see what&rsquo;s behind your score?</h3>
+    <p style="color:var(--muted);margin-bottom:16px">Enter your email to unlock your complete Delivery Score report.</p>
+    <form name="delivery-score-report" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="unlockForm" novalidate>
+      <input type="hidden" name="form-name" value="delivery-score-report">
+      <input type="hidden" name="subject" data-remove-prefix value="Contracks Global: Delivery Score report">
+      <input type="hidden" name="brand"><input type="hidden" name="score_name"><input type="hidden" name="assessment_object">
+      <input type="hidden" name="score"><input type="hidden" name="band"><input type="hidden" name="level">
+      <input type="hidden" name="contain"><input type="hidden" name="command"><input type="hidden" name="close"><input type="hidden" name="confirm"><input type="hidden" name="control"><input type="hidden" name="weakest_c">
+      <input type="hidden" name="answers">
+      <input type="hidden" name="q16"><input type="hidden" name="q17"><input type="hidden" name="q18"><input type="hidden" name="q18_other"><input type="hidden" name="q19"><input type="hidden" name="q20">
+      <input type="hidden" name="fit"><input type="hidden" name="review_flag">
+      <input type="hidden" name="engine_version"><input type="hidden" name="config_version"><input type="hidden" name="score_version">
+      <p class="hp" hidden style="display:none" aria-hidden="true"><label>Leave empty: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+      <div class="row">
+        <div class="field"><label for="uEmail">Email *</label><input id="uEmail" name="email" type="email" autocomplete="email" required></div>
+        <div class="field"><label for="uName">Name <span class="opt">(Optional)</span></label><input id="uName" name="name" autocomplete="name"></div>
+      </div>
+      <label class="consent"><input type="checkbox" name="consent" value="yes"> Send me occasional field notes from Contracks Global.</label>
+      <button type="submit" class="btn btn-navy" id="unlockBtn">Unlock my report &rarr;</button>
+      <p class="form-status" id="unlockStatus" role="status" aria-live="polite"></p>
+      <p class="form-foot">Your email unlocks the report only. It never subscribes you to anything unless you tick the box. <a href="privacy.html" style="color:var(--muted)">Privacy</a>.</p>
+    </form>
+  </div>
+</section>
+
+<section id="report" class="report" hidden>
+  <div class="panel">
+    <div class="print-only"><b style="font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--navy)">Contracks Global<span style="color:var(--gold)">.</span></b></div>
+    <span class="pill">Your Delivery Score report</span>
+    <p class="meta" id="pMeta" style="margin-top:12px"></p>
+    <div class="res-head" style="margin-top:16px">
+      <div class="big"><span id="pTotal"></span><small>OUT OF 100</small></div>
+      <div><div class="bandname" id="pBand"></div><div class="levelname" id="pLevel"></div><p id="pLevelMeaning" style="color:var(--muted);margin-top:6px"></p></div>
+    </div>
+    <h3>Your five controls</h3>
+    <div id="pCs"></div>
+    <h3>Strengths and weaknesses</h3>
+    <p id="pSW"></p>
+    <h3>Key exposure</h3>
+    <p id="pExposure"></p>
+    <p id="pConsequence" style="color:var(--muted)"></p>
+    <h3>Three first actions</h3>
+    <ol id="pActions"></ol>
+    <h3>Your five-line checklist</h3>
+    <ul class="checklist" id="pChecklist"></ul>
+    <h3>Your next step</h3>
+    <div class="options" id="pOptions"></div>
+    <p id="pPaid" style="margin-top:14px"></p>
+    <div class="report-actions no-print">
+      <button type="button" class="btn btn-navy" id="pdfBtn">Download PDF</button>
+      <a href="/quiz" class="btn btn-line" id="retake">Retake the Delivery Score</a>
+    </div>
+    <p class="powered no-print">Powered by the 5Cs Framework&trade; &mdash; Fragile &middot; Exposed &middot; Resilient.</p>
+    <p class="powered">A self-assessment based only on your answers, not an audit of your programme.</p>
+    <div class="print-only print-foot">Contracks Global &middot; Delivery Score &middot; Powered by the 5Cs Framework&trade; &mdash; Fragile &middot; Exposed &middot; Resilient.</div>
+  </div>
+</section>
+
+<section id="call" hidden>
+<form action="thanks.html" class="card cform" method="POST" name="contracks-call" data-netlify="true" netlify-honeypot="bot-field" data-contact-form data-success="Thank you. We’ve received your request. We’ll contact you using your preferred method to arrange your free 45-minute conversation.">
+<input type="hidden" name="form-name" value="contracks-call">
+<input type="hidden" name="subject" data-remove-prefix value="Contracks Global: call request">
+<input type="hidden" name="brand" value="Contracks Global">
+<input type="hidden" name="form_purpose" value="Call request">
+<input type="hidden" name="source" value="Booking form">
+<input type="hidden" name="plan">
+<input type="hidden" name="score_name"><input type="hidden" name="score"><input type="hidden" name="band"><input type="hidden" name="level"><input type="hidden" name="contain"><input type="hidden" name="command"><input type="hidden" name="close"><input type="hidden" name="confirm"><input type="hidden" name="control"><input type="hidden" name="weakest_c">
+<input type="hidden" name="q16"><input type="hidden" name="q17"><input type="hidden" name="q18"><input type="hidden" name="q18_other"><input type="hidden" name="q19"><input type="hidden" name="q20">
+<input type="hidden" name="fit"><input type="hidden" name="review_flag"><input type="hidden" name="engine_version"><input type="hidden" name="config_version"><input type="hidden" name="score_version">
+<p class="hp" hidden style="display:none" aria-hidden="true"><label>Leave empty: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+<h3 class="cform-h">Let&rsquo;s talk.</h3>
+<p class="cform-sub">Leave your details and we&rsquo;ll get in touch.</p>
+<div class="fgrid">
+<div class="field"><label for="cf-name">Name *</label><input id="cf-name" name="name" autocomplete="name" required></div>
+<div class="field"><label for="cf-company">Company *</label><input id="cf-company" name="company" autocomplete="organization" required></div>
+<div class="field full"><label for="cf-email">Email *</label><input id="cf-email" name="email" type="email" autocomplete="email" required></div>
+<fieldset class="field full cmethod"><legend>Preferred contact method *</legend>
+<div class="cmethod-opts">
+<label><input type="radio" name="contact_method" value="whatsapp" checked required> WhatsApp</label>
+<label><input type="radio" name="contact_method" value="phone"> Phone call</label>
+<label><input type="radio" name="contact_method" value="linkedin"> LinkedIn message</label>
+<label><input type="radio" name="contact_method" value="email"> Email</label>
+</div></fieldset>
+<div class="field full" data-method-field="whatsapp"><label for="cf-wa">WhatsApp number *</label><input id="cf-wa" name="whatsapp" type="tel" autocomplete="tel" inputmode="tel" placeholder="+44 7700 900123" title="Include your country code, e.g. +44"></div>
+<div class="field full" data-method-field="phone" hidden><label for="cf-phone">Phone number *</label><input id="cf-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+44 20 7946 0123" title="Include your country code, e.g. +44"></div>
+<div class="field full" data-method-field="linkedin" hidden><label for="cf-li">LinkedIn profile URL *</label><input id="cf-li" name="linkedin" type="url" inputmode="url" placeholder="https://www.linkedin.com/in/yourname"></div>
+<div class="field full"><label for="cf-time">When is the best time to contact you? <span class="opt">(Optional)</span></label><input id="cf-time" name="best_time" maxlength="200" placeholder="e.g. Tomorrow morning, Thursday after 2 pm, or anytime next week…"></div>
+<div class="field full"><label for="cf-msg" data-message-label data-with-score="What would you like to discuss? &lt;span class=&quot;opt&quot;&gt;(Optional)&lt;/span&gt;" data-no-score="Tell us briefly about your programme &lt;span class=&quot;opt&quot;&gt;(Optional)&lt;/span&gt;">What would you like to discuss? <span class="opt">(Optional)</span></label><textarea id="cf-msg" name="message" maxlength="1000"></textarea><small class="count" data-count-for="message"></small></div>
+</div>
+<button type="submit" class="btn btn-navy">Request My Free Call &rarr;</button>
+<p class="form-status" data-form-status role="status" aria-live="polite"></p>
+<p class="form-foot">* Required. No documents needed &middot; No obligation. <a href="privacy.html" style="color:var(--muted)">Privacy</a>.</p>
+</form>
+</section>
+
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fwrap">
+      <div class="flogo"><b>Contracks Global<span>.</span></b><br><span>Better contracts. Better companies. Better communities.</span></div>
+      <div class="fbtns"><a href="index.html?plan=reset#book" class="btn btn-gold">Book your free 45-minute review call</a></div>
+    </div>
+    <div class="fwrap copy">
+      <span>&copy; 2026 Contracks Global &middot; Europe &middot; Africa &middot; Gulf</span>
+      <nav class="fnav"><a href="control.html">How the score works</a><a href="library.html">Library</a><a href="https://serguei-poppeleer.netlify.app/book">The book</a><a href="https://www.linkedin.com/company/contracks-global/">LinkedIn</a><a href="mailto:hello@contracks.global">hello@contracks.global</a><a href="privacy.html">Privacy</a></nav>
+    </div>
+  </div>
+</footer>
+
+<script src="dcl.js"></script>
+<script src="score-engine.js"></script>
+<script src="contracks.config.js"></script>
+<script src="contact-form.js"></script>
+<script src="quiz.js"></script>
+</body>
+</html>
