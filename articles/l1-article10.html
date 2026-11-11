@@ -146,7 +146,7 @@
 
   <div class="key-line"><span style="display:block;font-family:'DM Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">Contracks Law</span>Green is the colour of the question nobody asked.</div>
 
-  <p>I have walked sites in airports, power plants and pipelines, on four continents, where the dashboard was green and the work had quietly stopped weeks earlier.</p>
+  <p>I have walked sites in transport hubs, power plants and pipelines, on four continents, where the dashboard was green and the work had quietly stopped weeks earlier.</p>
 
   <div class="key-line">A dashboard reports. It does not control. Reporting is what happened. Control is what happens next.</div>
 
@@ -298,7 +298,7 @@ function remain(sec){sec=Math.max(0,Math.round(sec));const m=Math.floor(sec/60),
 function setUI(on){document.getElementById('cksIcon').innerHTML=on?'<rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/>':'<polygon points="6,4 20,12 6,20"/>';document.getElementById('cksPlayer').classList.toggle('playing',on);document.getElementById('cksListenLabel').textContent=on?'Pause':'Listen to this article';}
 function label(){return MODE==='el'?'Contracks Global Insights':MODE==='plain'?'Audio article':'Browser voice (preview)';}
 function applySrc(){const l=document.getElementById('cksSrcL');l.textContent=MODE==='el'?'ELEVENLABS':MODE==='plain'?'AUDIO':'BROWSER';if(MODE==='el'&&times){const d=times.at(-1)?.end||0;document.getElementById('cksListenTime').textContent='· '+Math.max(1,Math.round(d/60))+' min';}if(MODE!=='plain')document.querySelector('main').classList.add('clickable');setStatus(label());}
-window.addEventListener('DOMContentLoaded',async()=>{build();document.getElementById('cksPlayer').classList.add('show');try{const r=await fetch(`${AUDIO_BASE}/${ARTICLE_SLUG}.sentences.json`,{cache:'no-cache'});if(!r.ok)throw 0;const d=await r.json();times=d.sentences;if(!Array.isArray(times)||!times.length)throw 0;if(times.length!==N)console.warn(`Sentence mismatch: audio ${times.length} vs page ${N}`);MODE='el';E=elEngine;applySrc();return;}catch(e){}try{const h=await fetch(`${AUDIO_BASE}/${ARTICLE_SLUG}.mp3`,{headers:{Range:'bytes=0-1'},cache:'no-cache'});if(h.ok||h.status===206){MODE='plain';E=plainEngine;applySrc();return;}}catch(e){}MODE='browser';E=brEngine;pickVoice();speechSynthesis.onvoiceschanged=pickVoice;speechSynthesis.getVoices();applySrc();});
+window.addEventListener('DOMContentLoaded',async()=>{build();/* audio paused until re-recorded */try{const r=await fetch(`${AUDIO_BASE}/${ARTICLE_SLUG}.sentences.json`,{cache:'no-cache'});if(!r.ok)throw 0;const d=await r.json();times=d.sentences;if(!Array.isArray(times)||!times.length)throw 0;if(times.length!==N)console.warn(`Sentence mismatch: audio ${times.length} vs page ${N}`);MODE='el';E=elEngine;applySrc();return;}catch(e){}try{const h=await fetch(`${AUDIO_BASE}/${ARTICLE_SLUG}.mp3`,{headers:{Range:'bytes=0-1'},cache:'no-cache'});if(h.ok||h.status===206){MODE='plain';E=plainEngine;applySrc();return;}}catch(e){}MODE='browser';E=brEngine;pickVoice();speechSynthesis.onvoiceschanged=pickVoice;speechSynthesis.getVoices();applySrc();});
 window.addEventListener('beforeunload',()=>{if(MODE==='browser')speechSynthesis.cancel();});
 </script>
 </body>
