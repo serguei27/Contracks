@@ -478,3 +478,4 @@ form.is-sent .fgrid,form.is-sent button[type=submit]{opacity:.55}
 .work4 .svc{transition:box-shadow .25s,transform .25s}.work4 .svc.hl{box-shadow:0 0 0 3px var(--gold),0 18px 40px rgba(10,22,40,.12);transform:translateY(-4px)}
 .work4 .svc h3{min-height:2.6em;display:flex;align-items:flex-end}@media (max-width:640px){.work4 .svc h3{min-height:0}}
 .flow4 .stage p{flex:1}.flow4 .stage a.go{margin-top:auto;display:block;padding-top:14px;white-space:nowrap;font-size:.86rem}
+.quiz-box .btn-navy{border:1px solid rgba(197,160,80,.55)}.quiz-box p.fit-call{margin:18px 0 0;font-size:.92rem}.quiz-box .fit-call a{color:var(--gold-2);font-weight:600;text-decoration:none}
