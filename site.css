@@ -451,10 +451,10 @@ ol.after{list-style:none;counter-reset:a;margin-top:14px}
 /* Standard contact form (scorecard family v3.5) */
 .cform-h{font-size:1.6rem;margin-bottom:4px}
 .cform-sub{color:var(--muted);margin-bottom:18px}
-.cmethod{border:0;min-width:0}.cmethod legend{font-weight:600;font-size:.92rem;color:var(--navy);margin-bottom:8px}
-.cmethod-opts{display:flex;flex-wrap:wrap;gap:8px}
-.cmethod-opts label{display:inline-flex;gap:8px;align-items:center;border:1.5px solid #D5DAE3;border-radius:999px;padding:8px 14px;font-weight:500;cursor:pointer}
-.cmethod-opts label:has(input:checked){border-color:var(--navy);background:var(--gold-soft)}
+.cmethod{border:0;min-width:0}.cmethod legend{font-weight:600;font-size:.88rem;color:var(--navy);margin-bottom:8px}
+.cmethod-opts{display:flex;flex-direction:column;gap:8px}
+.cmethod-opts label{display:flex;gap:6px;align-items:center;font-weight:500;font-size:.95rem;cursor:pointer}
+
 .cmethod-opts input{width:auto;accent-color:var(--navy)}
 .opt{font-weight:400;color:var(--muted)}
 .count{color:var(--muted);font-size:.78rem;text-align:right}
