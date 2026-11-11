@@ -121,7 +121,6 @@
     track('score_started');
   }
   $('startBtn').addEventListener('click', start);
-  $('startBtn2').addEventListener('click', start);
   [].forEach.call(document.querySelectorAll('[data-start-quiz]'), function (b) { b.addEventListener('click', start); });
   $('backBtn').addEventListener('click', function () { if (cur > 0) { cur--; render(); $('quiz').scrollIntoView({ behavior: 'smooth' }); } });
   $('nextBtn').addEventListener('click', function () {
