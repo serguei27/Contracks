@@ -73,6 +73,7 @@
           if (!res.ok) throw new Error('Status ' + res.status);
           form.classList.add('is-sent');
           if (status) { status.className = 'form-status ok'; status.textContent = form.getAttribute('data-success'); }
+          if (button) { button.textContent = 'Sent ✓'; }
           [].forEach.call(form.querySelectorAll('input,textarea,button,select'), function (el) { el.disabled = true; });
           if (window.cksTrack) cksTrack('call_booked', window.cksScoreProps ? cksScoreProps() : undefined);
         })

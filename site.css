@@ -304,6 +304,8 @@ footer a:hover{color:var(--gold-2)}
   .hero-ctas .btn-navy{width:100%}
   .sticky{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;gap:10px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:#fff;border-top:1px solid var(--line);box-shadow:0 -8px 24px rgba(10,22,40,.08)}
   .sticky .btn{flex:1;padding:13px 10px;font-size:.92rem}
+  .sticky .btn-gold{flex:2;white-space:nowrap;font-size:.84rem;padding:13px 10px}
+  .sticky .btn-line{flex:1;white-space:nowrap;font-size:.84rem}
   footer{padding-bottom:100px}
 }
 
