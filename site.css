@@ -465,3 +465,5 @@ form.is-sent .fgrid,form.is-sent button[type=submit]{opacity:.55}
 .score-head{padding:72px 0 0}.score-head .head{margin-bottom:40px}
 .dcl-dark .dcl-top>.pill+p{margin-top:14px}
 .grid3.grid2{grid-template-columns:repeat(2,1fr)}@media (max-width:900px){.grid3.grid2{grid-template-columns:1fr}}
+.affil{margin-top:28px;text-align:center}.affil>b{display:block;font-size:1rem;color:var(--navy)}.affil-row{list-style:none;margin:14px 0 0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:12px}.affil-row li{min-width:120px;padding:12px 18px;border:1px solid var(--line);border-radius:10px;background:#fff;font-weight:700;letter-spacing:.04em;color:var(--navy)}.affil-cap{margin:10px 0 0;font-size:.85rem;color:var(--muted)}@media (max-width:480px){.affil-row li{flex:1 1 calc(50% - 12px);min-width:0}}
+.card.team{max-width:900px}
