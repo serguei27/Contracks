@@ -480,3 +480,5 @@ form.is-sent .fgrid,form.is-sent button[type=submit]{opacity:.55}
 .flow4 .stage p{flex:1}.flow4 .stage a.go{margin-top:auto;display:block;padding-top:14px;white-space:nowrap;font-size:.86rem}
 .quiz-box .btn-navy{border:1px solid rgba(197,160,80,.55)}.quiz-box p.fit-call{margin:18px 0 0;font-size:.92rem}.quiz-box .fit-call a{color:var(--gold-2);font-weight:600;text-decoration:none}
 .work4 .prog-stage{display:block;margin-top:14px;font-size:.74rem;font-weight:700;letter-spacing:.12em;color:var(--gold)}
+.plans4 .prog-stage{display:block;margin-bottom:8px;font-size:.74rem;font-weight:700;letter-spacing:.12em;color:var(--gold)}.plans4 .plan h3{min-height:2.5em;display:flex;align-items:flex-end;line-height:1.2}.plans4 .plan .for{min-height:3em}.plans4 .plan .chip{align-self:flex-start}
+@media (max-width:640px){.plans4 .plan h3,.plans4 .plan .for{min-height:0}}
