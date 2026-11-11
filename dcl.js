@@ -14,8 +14,9 @@
   };
   function init(box){
     var panel=box.querySelector('.dcl-panel'),btns=[].slice.call(box.querySelectorAll('.dcl-step'));
+    var noStart=box.hasAttribute('data-dcl-nostart'); /* the homepage has its own Start button under the Ladder */
     var show=function(n){var l=LV[n];
-      panel.innerHTML='<b class="dcl-h">'+l.t+': '+l.h+'</b><p>'+l.d+'</p><dl><div><dt>See</dt><dd>'+l.s+'</dd></div><div><dt>Act</dt><dd>'+l.a+'</dd></div></dl><p class="dcl-test">Think you&rsquo;re at this level? Test it.</p><a class="btn btn-navy dcl-start ac-pulse" href="/quiz">Start my Delivery Score</a>';};
+      panel.innerHTML='<b class="dcl-h">'+l.t+': '+l.h+'</b><p>'+l.d+'</p><dl><div><dt>See</dt><dd>'+l.s+'</dd></div><div><dt>Act</dt><dd>'+l.a+'</dd></div></dl>'+(noStart?'':'<p class="dcl-test">Think you&rsquo;re at this level? Test it.</p><a class="btn btn-navy dcl-start ac-pulse" href="/quiz">Start my Delivery Score</a>');};
     btns.forEach(function(b){
       b.addEventListener('click',function(){
         var n=b.getAttribute('data-level');
