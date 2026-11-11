@@ -470,3 +470,5 @@ form.is-sent .fgrid,form.is-sent button[type=submit]{opacity:.55}
 .plans-cta{text-align:center;margin-top:28px}.plans-cta .btn{white-space:nowrap;min-width:320px}@media (max-width:480px){.plans-cta .btn{width:100%;min-width:0;font-size:.92rem;padding:15px 12px}}
 .plans.plans4{grid-template-columns:repeat(4,1fr)}.plans4 .plan{padding:30px 24px}.plans4 .price{font-size:clamp(1.9rem,3vw,2.3rem)}@media (max-width:1200px){.plans.plans4{grid-template-columns:repeat(2,1fr)}}@media (max-width:700px){.plans.plans4{grid-template-columns:1fr}}
 .quote-line{color:var(--navy);font-weight:700;font-size:1.05rem;margin:0 0 14px}.plans-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.work4 .svc{display:flex;flex-direction:column}.work4 .svc .chip{align-self:flex-start;margin:4px 0 10px}.work4 .svc p{flex:1}.work4 .svc .btn{margin-top:18px;align-self:flex-start;white-space:normal}
+@media (max-width:1200px) and (min-width:901px){.grid4.work4{grid-template-columns:repeat(2,1fr)}}
