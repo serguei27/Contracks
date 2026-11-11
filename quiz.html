@@ -122,60 +122,7 @@
 .getrow:last-child{border:0}
 .getrow i{font-style:normal;font-family:'Playfair Display',serif;font-weight:800;color:var(--gold-2);font-size:1.3rem;width:22px;flex:none}
 .getrow b{display:block}.getrow span{color:rgba(255,255,255,.72);font-size:.92rem}
-.land-auth{max-width:1080px;margin:0 auto;padding:0 20px 8px}
-.land-auth .authority{margin:0}
-/* Situation picker with an animated example result */
-.inv{background:var(--navy);color:#fff;padding:72px 0}
-.inv-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:56px;align-items:center}
-.inv .eyebrow{font-size:.76rem;font-weight:700;letter-spacing:.14em;color:var(--gold-2)}
-.inv h2{color:#fff;font-size:clamp(1.9rem,4vw,2.7rem);margin:14px 0}
-.inv h2 em{color:var(--gold-2)}
-.inv .lead{color:rgba(255,255,255,.78);max-width:520px}
-.inv .ask{font-weight:700;margin:26px 0 12px}
-.chips{display:flex;flex-wrap:wrap;gap:10px}
-.chips button{min-height:44px;padding:10px 18px;border-radius:999px;border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;font:inherit;font-weight:600;font-size:.94rem;cursor:pointer;transition:background .2s,border-color .2s,color .2s}
-.chips button:hover{border-color:var(--gold-2)}
-.chips button[aria-pressed="true"]{background:var(--gold);border-color:var(--gold);color:var(--navy)}
-.chips button:focus-visible,.inv .btn:focus-visible{outline:2px solid var(--gold-2);outline-offset:3px}
-.inv .btn-navy{border:1px solid rgba(197,160,80,.6);margin-top:26px}
-.inv .reass{margin-top:14px;font-size:.88rem;color:rgba(255,255,255,.7)}
-.ex{background:#fff;color:var(--ink);border-radius:20px;box-shadow:0 30px 70px rgba(0,0,0,.35);overflow:hidden}
-.ex-top{display:flex;align-items:center;gap:8px;padding:12px 16px;border-bottom:1px solid var(--line);font-size:.84rem;font-weight:600;color:var(--navy)}
-.ex-top i{width:9px;height:9px;border-radius:50%;background:var(--line)}
-.ex-top span{flex:1;margin-left:6px}
-.ex-top em{font-style:normal;font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#8C6D25;border:1px solid var(--gold-line);border-radius:999px;padding:3px 9px}
-.ex-body{padding:20px}
-.ex-head{display:grid;grid-template-columns:150px minmax(0,1fr);gap:18px;align-items:center}
-.gauge{position:relative;width:150px;height:84px}
-.gauge svg{width:150px;height:84px;display:block}
-.gauge .trk{fill:none;stroke:var(--line);stroke-width:12;stroke-linecap:round}
-.gauge .val{fill:none;stroke:var(--gold);stroke-width:12;stroke-linecap:round;stroke-dasharray:198;stroke-dashoffset:198;transition:stroke-dashoffset .9s ease}
-.gauge b{position:absolute;left:0;right:0;bottom:0;text-align:center;font-family:'Playfair Display',serif;font-size:2.1rem;line-height:1;color:var(--navy)}
-.tiles{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.tile{border:1px solid var(--line);border-radius:12px;padding:10px 12px;font-size:.8rem;color:var(--muted)}
-.tile b{display:block;font-size:1.05rem;color:#2D6A4F}
-.tile.lv b{color:#8C6D25}
-.cbars{margin-top:16px;display:grid;gap:7px}
-.cbars div{display:grid;grid-template-columns:86px 1fr 38px;gap:10px;align-items:center;font-size:.74rem;font-weight:700;letter-spacing:.06em;color:var(--navy)}
-.cbars s{display:block;height:8px;border-radius:4px;background:var(--line);overflow:hidden;text-decoration:none}
-.cbars u{display:block;height:100%;width:0;border-radius:4px;transition:width .8s ease,background-color .3s}
-.cbars em{font-style:normal;color:var(--muted);text-align:right}
-.fixes{margin-top:16px;display:grid;gap:8px}
-.fix{border:1px solid var(--line);border-radius:12px;padding:10px 12px;font-size:.82rem;line-height:1.45;opacity:1;transform:none;transition:opacity .45s ease,transform .45s ease}
-.fix.pre{opacity:0;transform:translateY(8px)}
-.fix b{display:block;color:var(--navy);margin-bottom:3px}
-.fix .self{color:#2D6A4F}.fix .help{color:#8C6D25}
-.fix svg{width:13px;height:13px;vertical-align:-2px;margin-right:4px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.inv-told{margin:0 0 16px;padding:12px 16px;border-left:4px solid var(--gold);border-radius:0 12px 12px 0;background:#fff;box-shadow:0 0 0 1px var(--line) inset;font-weight:600;color:var(--navy)}
-.cq{padding:72px 0;border-top:1px solid var(--line)}.cq .wrap{max-width:900px}
-.cq-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:26px 0}
-.cq-stats div{border:1px solid var(--line);border-radius:14px;padding:18px}
-@media (hover:hover){.cq-stats div,.faq-mini details{transition:transform .2s ease,box-shadow .2s ease}.cq-stats div:hover,.faq-mini details:hover{box-shadow:0 0 0 3px var(--gold),0 18px 40px rgba(10,22,40,.12);transform:translateY(-4px)}}
-.cq-stats b{display:block;font-family:'Playfair Display',serif;font-size:2rem;color:var(--navy);line-height:1.1}
-.cq-stats span{font-size:.86rem;color:var(--muted)}
-@media (max-width:900px){.land,.inv-grid{grid-template-columns:1fr;gap:32px}.land{padding-top:40px}}
-@media (max-width:700px){.inv{padding:52px 0}.chips{gap:8px}.chips button{padding:10px 13px;font-size:.86rem}.cbars{display:none}.fix:nth-child(3){display:none}.ex-head{grid-template-columns:1fr}.gauge{margin:0 auto}.cq-stats{grid-template-columns:1fr}}
-@media (prefers-reduced-motion:reduce){.gauge .val,.cbars u,.fix,.chips button{transition:none}}
+@media (max-width:900px){.land{grid-template-columns:1fr;gap:32px;padding-top:40px}}
 @media (max-width:700px){.payoffs,.options,.unlock .row{grid-template-columns:1fr}.res-head{grid-template-columns:1fr;gap:10px}.big{font-size:3.6rem}.panel{padding:22px}.rail{gap:6px}.rail b{font-size:.62rem}.cline{grid-template-columns:1fr;gap:4px}}
 @media print{
   @page{size:A4;margin:16mm 14mm 20mm}
@@ -190,6 +137,104 @@
   .print-foot{position:fixed;bottom:-12mm;left:0;right:0;text-align:center;font-size:9pt;color:#5A6476}
   .bar i,.rail .col i{-webkit-print-color-adjust:exact;print-color-adjust:exact}
 }
+/* How the score works, as on the Ask Contracks quiz page */
+/* HOW THE SCORE WORKS (landing) */
+.how{max-width:1080px;margin:0 auto;padding:0 20px 88px}
+.how-block{padding:56px 0;border-top:1px solid var(--line)}
+.how-kicker{display:flex;align-items:center;gap:14px;color:#8C6D25;font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.how-kicker::after{content:"";flex:1;height:1px;background:var(--line)}
+.how h2{font-size:clamp(1.8rem,3.6vw,2.6rem);margin:14px 0 12px;max-width:760px}
+.how .lead{color:var(--muted);font-size:1.05rem;max-width:680px}
+.how-steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:28px}
+.how-step{border:1px solid var(--line);border-radius:18px;padding:22px;background:#fff}
+.how-step i{font-style:normal;display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--navy);color:#fff;font-weight:700;font-size:.9rem;margin-bottom:14px}
+.how-step b{display:block;color:var(--navy);margin-bottom:4px}
+.how-step span{color:var(--muted);font-size:.92rem}
+.how-cs{list-style:none;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;margin-top:28px}
+.how-cs li{border-top:3px solid var(--navy);padding-top:12px}
+.how-cs small{display:block;color:#8C6D25;font-weight:700;font-size:.72rem;letter-spacing:.12em}
+.how-cs b{display:block;font-size:.98rem;letter-spacing:.06em;color:var(--navy);margin:2px 0}
+.how-cs span{color:var(--muted);font-size:.9rem}
+.how-faq{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 40px;margin-top:28px}
+.how-faq h3{font-size:1.15rem;margin-bottom:6px}
+.how-faq p{color:var(--muted)}
+.how-end{background:var(--navy);color:#fff;border-radius:28px;padding:52px 40px;text-align:center}
+.how-end h2{color:#fff;margin:0 auto 12px}
+.how-end h2 em{color:var(--gold-2)}
+.how-end p{color:rgba(255,255,255,.75);margin-bottom:26px}
+.how-end .free-tag{color:var(--gold-2)}
+.how-end .land-note{color:rgba(255,255,255,.65)}
+@media (max-width:900px){.how-steps{grid-template-columns:repeat(2,minmax(0,1fr))}.how-cs{grid-template-columns:minmax(0,1fr)}.how-faq{grid-template-columns:minmax(0,1fr)}}
+/* LIVE DEMOS (illustrative) */
+.how-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:28px;align-items:center;margin-top:28px}
+.how-grid .how-steps{grid-template-columns:repeat(2,minmax(0,1fr));margin-top:0}
+.how-step{transition:border-color .3s,box-shadow .3s,transform .3s}
+.how-step.on{border-color:var(--navy);box-shadow:0 14px 34px rgba(10,22,40,.12);transform:translateY(-2px)}
+.how-step.on i{background:var(--gold);color:var(--navy)}
+.demo{background:var(--navy);color:#fff;border-radius:24px;padding:22px;box-shadow:0 24px 60px rgba(10,22,40,.22);min-height:360px;display:flex;flex-direction:column}
+.demo-top{display:flex;justify-content:space-between;align-items:center;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+.demo-live{display:inline-flex;align-items:center;gap:8px;color:var(--gold-2)}
+.demo-live i{width:8px;height:8px;border-radius:50%;background:#E5484D;box-shadow:0 0 0 0 rgba(229,72,77,.6);animation:livedot 1.6s infinite}
+@keyframes livedot{70%{box-shadow:0 0 0 8px rgba(229,72,77,0)}100%{box-shadow:0 0 0 0 rgba(229,72,77,0)}}
+.demo-stage{position:relative;flex:1;margin-top:16px}
+.dp{position:absolute;inset:0;opacity:0;transform:translateY(8px);transition:opacity .45s,transform .45s;pointer-events:none}
+.dp.on{opacity:1;transform:none}
+.dq-meta{display:flex;justify-content:space-between;font-size:.8rem;color:rgba(255,255,255,.7)}
+.dq-meta b{color:var(--gold-2);letter-spacing:.08em}
+.drail{display:grid;grid-template-columns:repeat(5,1fr);gap:5px;margin:10px 0 18px}
+.drail span{height:6px;border-radius:3px;background:rgba(255,255,255,.14);overflow:hidden}
+.drail u{display:block;height:100%;width:0;background:var(--gold-2);transition:width .5s}
+.dq-t{font-family:'Playfair Display',Georgia,serif;font-size:1.18rem;line-height:1.35;min-height:4.1em}
+.dq-ans{display:flex;gap:10px;margin-top:16px}
+.dq-ans span{flex:1;text-align:center;padding:12px;border-radius:12px;border:1.5px solid rgba(255,255,255,.22);font-weight:700;transition:all .2s}
+.dq-ans span.hit{background:#fff;color:var(--navy);border-color:#fff;transform:scale(.97)}
+.dring{width:150px;height:150px;border-radius:50%;margin:6px auto 12px;display:grid;place-items:center;background:conic-gradient(var(--c,#C5A050) calc(var(--p,0)*1%),rgba(255,255,255,.12) 0)}
+.dring div{width:118px;height:118px;border-radius:50%;background:var(--navy);display:grid;place-items:center;text-align:center}
+.dring b{font-family:'Playfair Display',Georgia,serif;font-size:2.6rem;line-height:1}
+.dring small{display:block;font-size:.66rem;letter-spacing:.12em;color:rgba(255,255,255,.6)}
+.dband{text-align:center;font-weight:700;letter-spacing:.06em}
+.dband span{display:inline-block;padding:4px 14px;border-radius:999px;background:rgba(197,160,80,.18);color:var(--gold-2)}
+.dbars{display:grid;gap:9px}
+.dbar{display:grid;grid-template-columns:86px minmax(0,1fr) 44px;gap:10px;align-items:center;font-size:.8rem;font-weight:600;letter-spacing:.04em;border-radius:8px;padding:3px 4px;transition:background .3s}
+.dbar i{height:10px;border-radius:5px;background:rgba(255,255,255,.12);overflow:hidden}
+.dbar u{display:block;height:100%;width:0;border-radius:5px;transition:width .9s cubic-bezier(.2,.8,.2,1)}
+.dbar b{text-align:right}
+.dbar.weak{background:rgba(192,57,43,.22);animation:weakpulse 1.4s ease-in-out infinite}
+@keyframes weakpulse{50%{background:rgba(192,57,43,.36)}}
+.dweak{margin-top:12px;border:1px solid rgba(255,255,255,.22);border-radius:12px;padding:12px 14px;font-size:.86rem;color:rgba(255,255,255,.82)}
+.dweak b{display:block;color:#F2A49B}
+.drep h4{font-family:'Playfair Display',Georgia,serif;font-size:1.15rem;margin-bottom:10px}
+.drep li{list-style:none;display:flex;gap:10px;align-items:flex-start;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.1);font-size:.9rem;color:rgba(255,255,255,.85);opacity:.35;transition:opacity .3s}
+.drep li.ok{opacity:1}
+.drep li em{flex:none;width:18px;height:18px;border-radius:4px;border:2px solid rgba(255,255,255,.5);display:grid;place-items:center;font-style:normal;font-size:.7rem;color:var(--navy)}
+.drep li.ok em{background:var(--gold-2);border-color:var(--gold-2)}
+.dpdf{display:inline-block;margin-top:12px;padding:6px 12px;border-radius:8px;background:#fff;color:var(--navy);font-weight:700;font-size:.78rem;opacity:0;transition:opacity .4s}
+.dpdf.on{opacity:1}
+.demo-cap{margin-top:12px;font-size:.74rem;color:rgba(255,255,255,.5)}
+.how-cs .cbar{display:block;height:8px;border-radius:4px;background:var(--line);overflow:hidden;margin-top:12px}
+.how-cs .cbar u{display:block;height:100%;width:0;border-radius:4px;transition:width 1.1s cubic-bezier(.2,.8,.2,1)}
+.how-cs .cpct{display:block;margin-top:6px;font-weight:700;color:var(--navy);font-size:.9rem}
+.how-cs-note{margin-top:14px;font-size:.82rem;color:var(--muted)}
+.how-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:28px}
+.how-stat{border:1px solid var(--line);border-radius:18px;padding:20px;display:flex;gap:16px;align-items:center}
+.how-stat b{display:block;font-family:'Playfair Display',Georgia,serif;font-size:2rem;line-height:1;color:var(--navy)}
+.how-stat span{color:var(--muted);font-size:.9rem}
+.sw{flex:none;width:58px;height:58px;border-radius:50%;background:conic-gradient(var(--navy) calc(var(--p,0)*1%),var(--line) 0);display:grid;place-items:center}
+.sw::after{content:"";width:44px;height:44px;border-radius:50%;background:#fff}
+.how-end{display:grid;grid-template-columns:auto minmax(0,1fr);gap:40px;align-items:center;text-align:left}
+.how-end .end-ring{width:170px;height:170px}
+.how-end .end-ring div{width:134px;height:134px}
+.how-end .end-band{margin-top:4px}
+.how-end .start-wrap{align-items:flex-start}
+@media (max-width:900px){.how-grid{grid-template-columns:minmax(0,1fr)}.how-stats{grid-template-columns:minmax(0,1fr)}.how-end{grid-template-columns:minmax(0,1fr);text-align:center;justify-items:center}.how-end .start-wrap{align-items:center}}
+@media (max-width:560px){.how-grid .how-steps{grid-template-columns:minmax(0,1fr)}.demo{min-height:340px;padding:18px}.dbar{grid-template-columns:76px minmax(0,1fr) 40px}}
+@media (prefers-reduced-motion:reduce){.dp,.dbar u,.drail u,.how-cs .cbar u,.how-step{transition:none}.demo-live i,.dbar.weak{animation:none}}
+@media (max-width:560px){.how-steps{grid-template-columns:minmax(0,1fr)}.how-block{padding:44px 0}.how-end{padding:40px 20px;border-radius:22px}}
+
+.how-end .btn-navy{border:1px solid rgba(197,160,80,.6)}
+.how .dcl-panel{background:#fff;border:1px solid var(--line)}
+.stat-note{margin-top:28px}
+@media (hover:hover){.how-step:hover,.how-stat:hover{border-color:var(--gold);box-shadow:0 0 0 3px var(--gold),0 18px 40px rgba(10,22,40,.12);transform:translateY(-4px)}.how-stat{transition:transform .2s,box-shadow .2s}}
 </style>
 </head>
 <body>
@@ -217,6 +262,7 @@
     <p class="sub">15 Yes/No questions on the 5Cs Framework&trade;, then 5 about your situation. You see your Delivery Score straight away.</p>
     <div class="start-wrap"><button type="button" class="btn btn-navy ac-pulse" id="startBtn">Start my Delivery Score</button><span class="free-tag">FREE</span></div>
     <p class="land-note">About 4 minutes &middot; No email needed to see your score</p>
+    <p class="land-note">15 Yes/No questions on the 5Cs Framework&trade;, plus 5 about your situation. An indicative self-assessment, not an audit of your programme.</p>
   </div>
   <div class="getbox">
     <div class="t">What you get</div>
@@ -225,44 +271,76 @@
     <div class="getrow"><i>3</i><div><b>Your weakest control</b><span>Which of the five Cs to look at first, and why it matters.</span></div></div>
   </div>
 </div>
-<div class="land-auth"><div class="authority"><img src="assets/serguei-portrait.jpeg" alt="Serguei Poppeleer"><p>Built by Serguei Poppeleer, civil engineer with over 20 years on major construction and EPC contracts in Europe, Africa and the Gulf. MCIArb &middot; WorldCC &middot; LLM Construction Law &amp; Arbitration &middot; MSc Civil Engineering &middot; Executive MBA.</p></div></div>
 </section>
-<div id="howScore">
-<section class="inv" id="invite" aria-labelledby="inv-h"><div class="wrap inv-grid">
-<div>
-<span class="eyebrow">DELIVERY SCORE &middot; FREE</span>
-<h2 id="inv-h">How much control do you <em>really</em> have?</h2>
-<p class="lead">In about 4 minutes, see what&rsquo;s working, what to fix first, and the simplest way to fix it: on your own or with help.</p>
-<p class="ask" id="inv-ask">Where is your programme right now?</p>
-<div class="chips" role="group" aria-labelledby="inv-ask" id="invChips"></div>
-<button type="button" class="btn btn-navy ac-pulse" data-start-quiz id="invStart">Start my Delivery Score &rarr;</button>
-<p class="reass">About 4 minutes &middot; No documents needed &middot; Results on screen &middot; No sales call unless you ask</p>
+<div id="howScore" class="how">
+<section class="how-block" aria-labelledby="how-h">
+<div class="how-kicker"><span>How the score works</span></div>
+<h2 id="how-h">Know where your programme may be exposed. <em>In four minutes.</em></h2>
+<p class="lead">An indicative result based on your own answers. It points to where to look first. It is not an audit of your programme.</p>
+<div class="how-grid">
+<div class="how-steps">
+<div class="how-step"><i>1</i><b>Your Delivery Score</b><span>Out of 100, with your band: Fragile, Exposed or Resilient, and your level on The Delivery Control Ladder&trade;.</span></div>
+<div class="how-step"><i>2</i><b>Your five-C profile</b><span>Where your delivery control looks stronger or weaker, control by control.</span></div>
+<div class="how-step"><i>3</i><b>Your weakest control</b><span>The one to look at first, and why it matters.</span></div>
+<div class="how-step"><i>4</i><b>Your detailed report</b><span>Three first actions and a five-line checklist, with a PDF. Free with your email.</span></div>
 </div>
-<div class="ex" aria-live="polite">
-<div class="ex-top"><i></i><i></i><i></i><span id="exTitle">Your result</span><em>Example</em></div>
-<div class="ex-body">
-<div class="ex-head"><div class="gauge" role="img" id="exGauge" aria-label="Example score"><svg viewBox="0 0 150 84" aria-hidden="true"><path class="trk" d="M12 78a63 63 0 0 1 126 0"/><path class="val" id="exArc" d="M12 78a63 63 0 0 1 126 0"/></svg><b id="exScore">0</b></div>
-<div class="tiles"><div class="tile"><b id="exWork">0 of 15</b>working</div><div class="tile lv"><b id="exLevel">&nbsp;</b>Delivery Control Ladder&trade;</div></div></div>
-<div class="cbars" id="exBars"></div>
-<div class="fixes" id="exFixes"></div>
-</div></div>
-</div></section>
-<section class="hero" id="how-score" data-track-view="how_score_viewed"><div class="wrap hero-grid"><div><span class="pill">How the score works</span><h1>Your dashboard is green. <em>But what is slipping underneath?</em></h1><p class="sub">Unclosed decisions. Unverified commitments. Scope changes without clear ownership. Your delivery control system may be less reliable than your reporting suggests.</p><p class="hero-note">Free &middot; 15 Yes/No questions &middot; About 4 minutes. Your score is shown only to you.</p></div><figure class="ctl-photo"><img src="assets/ladder-site.jpeg" alt="Tower cranes over a large construction site at sunset" width="1100" height="733"></figure></div></section>
-<section class="alt"><div class="wrap"><div class="head"><span class="pill">What you receive</span><h2>Know where you may be exposed. <em>In four minutes.</em></h2><p>An indicative result, based on your own answers. It points to where to look first, and is not an audit of your project.</p></div><div class="ctl-4"><div class="card"><b class="n">1</b><h3>Your Delivery Score</h3><p>Out of 100, your band and your level on The Delivery Control Ladder&trade;.</p></div><div class="card"><b class="n">2</b><h3>Your five-C profile</h3><p>Where control may be stronger or weaker, across the five disciplines.</p></div><div class="card"><b class="n">3</b><h3>Your principal exposure</h3><p>The most important potential weakness your answers support.</p></div><div class="card"><b class="n">4</b><h3>Your detailed report</h3><p>Three first actions and a five-line checklist, free with your email.</p></div></div><div class="stat-note"><b>8.5%</b><span>of major projects land on budget and on schedule.</span><small>Bent Flyvbjerg, University of Oxford. Study of 16,000+ projects worldwide.</small></div></div></section>
-<section><div class="wrap"><div class="head"><span class="pill">Your result</span><h2>A control-exposure scorecard, <em>not a quiz result.</em></h2></div><div class="cr-wrap"><div class="dcl-card"><div class="dcl-card-t"><b>Your Delivery Score</b><span class="dcl-tag">Illustrative example</span></div><div class="cr-top"><div class="cr-score"><span>60</span></div><div class="cr-lvl"><b>Exposed &middot; Level 3 Controlled</b><span>Example Delivery Score, band and level on The Delivery Control Ladder&trade;.</span></div></div><div class="dcl-bar hi" role="img" aria-label="CONTAIN 67 percent, illustrative"><span>CONTAIN</span><i><u style="width:67%"></u></i><em>67%</em></div><div class="dcl-bar hi" role="img" aria-label="COMMAND 67 percent, illustrative"><span>COMMAND</span><i><u style="width:67%"></u></i><em>67%</em></div><div class="dcl-bar low" role="img" aria-label="CLOSE 33 percent, illustrative"><span>CLOSE</span><i><u style="width:33%"></u></i><em>33%</em></div><div class="dcl-bar hi" role="img" aria-label="CONFIRM 67 percent, illustrative"><span>CONFIRM</span><i><u style="width:67%"></u></i><em>67%</em></div><div class="dcl-bar hi" role="img" aria-label="CONTROL 67 percent, illustrative"><span>CONTROL</span><i><u style="width:67%"></u></i><em>67%</em></div><div class="dcl-find"><b>Weakest discipline: CLOSE</b>Example finding, with decision closure as the lowest of the five.</div><div class="dcl-find"><b>Potential exposure</b>Decisions may remain open long enough to disrupt execution or delay corrective action.</div><div class="dcl-find"><b>In your detailed report</b>Three first actions from your answers and a five-line checklist, unlocked with your email.</div></div></div></div></section>
-<section class="alt"><div class="wrap"><div class="head"><span class="pill">The Delivery Control Ladder&trade;</span><h2>Where do you <em>think</em> you stand?</h2><p>Two things improve as you climb: how early you see problems, and how quickly you act.</p></div><div class="cr-wrap"><div class="dcl-card" data-dcl><div class="dcl-card-t"><b>The Delivery Control Ladder&trade;</b><span class="dcl-tag">Select a level</span></div><ol class="dcl-steps" aria-label="Five levels, from discovering problems too late to anticipating and acting early"><li><button type="button" class="dcl-step dcl-s1 dcl-c1" data-level="1" aria-pressed="false"><b>01</b><span>Reactive</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4 3 20h18zM12 10v5M12 18h.01"/></svg></button></li><li><button type="button" class="dcl-step dcl-s2 dcl-c2" data-level="2" aria-pressed="false"><b>02</b><span>Managed</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 9 5-9 5-9-5zM3 14l9 5 9-5"/></svg></button></li><li><button type="button" class="dcl-step dcl-s3 dcl-c3" data-level="3" aria-pressed="false"><b>03</b><span>Controlled</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/><circle cx="9" cy="7" r="2"/><circle cx="15" cy="12" r="2"/><circle cx="8" cy="17" r="2"/></svg></button></li><li><button type="button" class="dcl-step dcl-s4 dcl-c4" data-level="4" aria-pressed="false"><b>04</b><span>Operational</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/></svg></button></li><li><button type="button" class="dcl-step dcl-s5 dcl-c5" data-level="5" aria-pressed="false"><b>05</b><span>Scalable</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20v-6h4v6zM10 20V10h4v10zM15 20V5h4v15z"/></svg></button></li></ol><div class="dcl-way"><span class="a">Discover problems too late</span><i></i><span class="z">Anticipate and act early</span></div><div class="dcl-panel" aria-live="polite">Select the level that sounds most like your project.</div></div></div></div></section>
-<section><div class="wrap"><div class="head"><span class="pill">The 5Cs Framework&trade;</span><h2>What the Delivery Score <em>assesses.</em></h2></div><div class="fivec"><ol><li><i>C1</i><b>CONTAIN</b>Scope and change boundaries.</li><li><i>C2</i><b>COMMAND</b>One executable plan.</li><li><i>C3</i><b>CLOSE</b>Decision ownership and closure.</li><li><i>C4</i><b>CONFIRM</b>Supplier commitments and evidence.</li><li><i>C5</i><b>CONTROL</b>Weekly visibility and corrective action.</li></ol></div></div></section>
-<section class="alt"><div class="wrap"><div class="head"><span class="pill">Proof from the field</span><h2>One we <em>held under control.</em></h2></div><div class="sio-grid"><div class="card sio"><span class="pill">Energy &middot; Northern Europe &middot; Cross-border EPC</span><h3>Delivery control on a cross-border energy programme</h3><dl><dt>Situation</dt><dd>A cross-border EPC programme connecting two national energy systems: multiple contractors, multiple jurisdictions, and the scale at which a single unmanaged gap cascades fast.</dd><dt>Intervention</dt><dd>One operating truth across contractors and borders, decisions closed before they could cascade, vendor commitments verified, on a fixed control cadence.</dd><dt>Outcome</dt><dd>Issues exposed early, while still manageable. Commitments, decisions and cross-border interfaces were tracked before they became board-level surprises.</dd></dl></div></div></div></section>
-<section class="cq" aria-labelledby="cq-h"><div class="wrap"><div class="head"><span class="pill">Common questions</span><h2 id="cq-h">Answers, <em>straight.</em></h2></div>
-<div class="cq-stats"><div><b>15 + 5</b><span>Yes/No questions, then 5 about your situation</span></div><div><b>4 min</b><span>About 4 minutes</span></div><div><b>&euro;0</b><span>No email needed to see your score</span></div></div>
-<div class="faq-mini">
-    <details><summary>How long does it take?</summary><p>About 4 minutes: 15 Yes/No questions, then 5 short questions about your situation.</p></details>
-    <details><summary>Is it free?</summary><p>Yes. Your score shows straight away, with no email needed. Your email is only asked for if you want the detailed report.</p></details>
-    <details><summary>What do I get?</summary><p>Your Delivery Score out of 100, your band, your level on The Delivery Control Ladder&trade;, your five C scores and your weakest control. The detailed report adds three first actions and a five-line checklist, with a PDF copy.</p></details>
-    <details><summary>What happens after?</summary><p>Use the report to improve delivery control yourself, or book a free 45-minute call to go through your result. No documents needed, no obligation.</p></details>
-  </div>
-</div></section>
-<section class="quiz"><div class="wrap"><div class="quiz-box"><div><span class="pill">Free &middot; About 4 minutes</span><h2>The costliest problem may be the one <em style="font-style:normal;color:var(--gold-2)">you haven&rsquo;t seen yet.</em></h2><p>Discover your control level, potential weak points and where to strengthen your delivery system.</p><div class="hero-ctas"><button type="button" class="btn btn-navy ac-pulse" data-start-quiz>Start my Delivery Score</button><a href="#call" class="btn btn-gold">Book a Free 45-Minute Call &rarr;</a></div></div><ul class="ladder"><li><b>1</b><span>Reactive</span></li><li><b>2</b><span>Managed</span></li><li><b>3</b><span>Controlled</span></li><li><b>4</b><span>Operational</span></li><li><b>5</b><span>Scalable</span></li></ul></div></div></section>
+<div class="demo" id="demo" role="img" aria-label="Animated illustration of the Delivery Score: answering questions, a score of 60 out of 100 (Exposed), five control scores, the weakest control and the report.">
+<div class="demo-top"><span class="demo-live"><i></i>Live demo</span><span>Illustrative</span></div>
+<div class="demo-stage" aria-hidden="true">
+<div class="dp" data-p="0"><div class="dq-meta"><b id="dqC">CONTAIN</b><span id="dqN">Question 1 of 15</span></div><div class="drail" id="dRail"><span><u></u></span><span><u></u></span><span><u></u></span><span><u></u></span><span><u></u></span></div><p class="dq-t" id="dqT"></p><div class="dq-ans"><span id="dYes">Yes</span><span id="dNo">No</span></div></div>
+<div class="dp" data-p="1"><div class="dring" id="dRing"><div><span><b id="dNum">0</b><small>OUT OF 100</small></span></div></div><div class="dband"><span id="dBand">Exposed</span></div></div>
+<div class="dp" data-p="2"><div class="dbars" id="dBars"></div></div>
+<div class="dp" data-p="3"><div class="dbars" id="dBars2"></div><div class="dweak"><b>Your weakest control: CLOSE</b>Decisions may stay open long enough to disrupt execution or delay corrective action.</div></div>
+<div class="dp drep" data-p="4"><h4>Your detailed report</h4><ul id="dRep"><li><em>&#10003;</em>Give every critical open decision an owner and a deadline.</li><li><em>&#10003;</em>Run one weekly control meeting, with one agenda.</li><li><em>&#10003;</em>Check supplier dates against confirmed capacity.</li></ul><span class="dpdf" id="dPdf">PDF &darr;</span></div>
+</div>
+<p class="demo-cap">Example answers. Your own result depends on your answers.</p>
+</div>
+</div>
+<div class="stat-note"><b>8.5%</b><span>of major projects land on budget and on schedule.</span><small>Bent Flyvbjerg, University of Oxford. Study of 16,000+ projects worldwide.</small></div>
+</section>
+<section class="how-block" aria-labelledby="how-cs-h">
+<div class="how-kicker"><span>The 5Cs Framework&trade;</span></div>
+<h2 id="how-cs-h">What the Delivery Score <em>assesses.</em></h2>
+<p class="lead">Three Yes/No questions on each control: fifteen in all.</p>
+<ol class="how-cs">
+<li><small>C1</small><b>CONTAIN</b><span>Scope and change boundaries</span><i class="cbar" aria-hidden="true"><u data-v="67"></u></i><span class="cpct" data-v="67" aria-hidden="true">67%</span></li>
+<li><small>C2</small><b>COMMAND</b><span>One executable plan</span><i class="cbar" aria-hidden="true"><u data-v="67"></u></i><span class="cpct" data-v="67" aria-hidden="true">67%</span></li>
+<li><small>C3</small><b>CLOSE</b><span>Decision ownership and closure</span><i class="cbar" aria-hidden="true"><u data-v="33"></u></i><span class="cpct" data-v="33" aria-hidden="true">33%</span></li>
+<li><small>C4</small><b>CONFIRM</b><span>Supplier commitments and evidence</span><i class="cbar" aria-hidden="true"><u data-v="67"></u></i><span class="cpct" data-v="67" aria-hidden="true">67%</span></li>
+<li><small>C5</small><b>CONTROL</b><span>Weekly visibility and corrective action</span><i class="cbar" aria-hidden="true"><u data-v="67"></u></i><span class="cpct" data-v="67" aria-hidden="true">67%</span></li>
+</ol>
+<p class="how-cs-note">Example profile, illustrative only: 67 &middot; 67 &middot; 33 &middot; 67 &middot; 67.</p>
+</section>
+<section class="how-block" aria-labelledby="how-dcl-h">
+<div class="how-kicker"><span>The Delivery Control Ladder&trade;</span></div>
+<h2 id="how-dcl-h">Where do you <em>think</em> you stand?</h2>
+<p class="lead">Two things improve as you climb: how early you see problems, and how quickly you act. Your score places you on one of five levels.</p>
+<div class="cr-wrap" style="margin-top:28px"><div class="dcl-card" data-dcl><div class="dcl-card-t"><b>The Delivery Control Ladder&trade;</b><span class="dcl-tag">Select a level</span></div><ol class="dcl-steps" aria-label="Five levels, from discovering problems too late to anticipating and acting early"><li><button type="button" class="dcl-step dcl-s1 dcl-c1" data-level="1" aria-pressed="false"><b>01</b><span>Reactive</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4 3 20h18zM12 10v5M12 18h.01"/></svg></button></li><li><button type="button" class="dcl-step dcl-s2 dcl-c2" data-level="2" aria-pressed="false"><b>02</b><span>Managed</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 9 5-9 5-9-5zM3 14l9 5 9-5"/></svg></button></li><li><button type="button" class="dcl-step dcl-s3 dcl-c3" data-level="3" aria-pressed="false"><b>03</b><span>Controlled</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/><circle cx="9" cy="7" r="2"/><circle cx="15" cy="12" r="2"/><circle cx="8" cy="17" r="2"/></svg></button></li><li><button type="button" class="dcl-step dcl-s4 dcl-c4" data-level="4" aria-pressed="false"><b>04</b><span>Operational</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/></svg></button></li><li><button type="button" class="dcl-step dcl-s5 dcl-c5" data-level="5" aria-pressed="false"><b>05</b><span>Scalable</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20v-6h4v6zM10 20V10h4v10zM15 20V5h4v15z"/></svg></button></li></ol><div class="dcl-way"><span class="a">Discover problems too late</span><i></i><span class="z">Anticipate and act early</span></div><div class="dcl-panel" aria-live="polite">Select the level that sounds most like your project.</div></div></div>
+</section>
+<section class="how-block" aria-labelledby="how-faq-h">
+<div class="how-kicker"><span>Common questions</span></div>
+<h2 id="how-faq-h">Answers, <em>straight.</em></h2>
+<div class="how-stats" aria-hidden="true">
+<div class="how-stat"><div><b data-count="20">20</b><span>questions: 15 scored, 5 about you</span></div></div>
+<div class="how-stat"><div class="sw" id="sw"></div><div><b id="swT">4:00</b><span>about 4 minutes</span></div></div>
+<div class="how-stat"><div><b>&euro;0</b><span>no email to see your score</span></div></div>
+</div>
+<div class="how-faq">
+<div><h3>How long does it take?</h3><p>About 4 minutes: 15 Yes/No questions, then 5 short questions about your situation.</p></div>
+<div><h3>Is it free?</h3><p>Yes. Your score shows straight away, with no email needed. Your email is only asked for if you want the detailed report.</p></div>
+<div><h3>What do I get?</h3><p>Your Delivery Score out of 100, your band, your level on The Delivery Control Ladder&trade;, your five C scores and your weakest control. The detailed report adds three first actions and a five-line checklist, with a PDF copy.</p></div>
+<div><h3>What happens after?</h3><p>Use the report to improve delivery control yourself, or book a free 45-minute call to go through your result. No documents needed, no obligation.</p></div>
+</div>
+</section>
+<div class="how-end">
+<div aria-hidden="true"><div class="dring end-ring" id="eRing"><div><span><b id="eNum">60</b><small>OUT OF 100</small></span></div></div><div class="dband end-band"><span id="eBand">Exposed</span></div></div>
+<div>
+<h2>Projects don&rsquo;t fail. <em>The systems around them do.</em></h2>
+<p>Find out where your delivery control stands, before a slipped date or a cost overrun tells you.</p>
+<div class="start-wrap"><button type="button" class="btn btn-navy ac-pulse" data-start-quiz>Start my Delivery Score</button><span class="free-tag">FREE</span></div>
+<p class="land-note">About 4 minutes &middot; Indicative self-assessment &middot; Not an audit of your programme</p>
+</div>
+</div>
 </div>
 <div class="wrap">
 
@@ -314,7 +392,7 @@
       <input type="hidden" name="contain"><input type="hidden" name="command"><input type="hidden" name="close"><input type="hidden" name="confirm"><input type="hidden" name="control"><input type="hidden" name="weakest_c">
       <input type="hidden" name="answers">
       <input type="hidden" name="q16"><input type="hidden" name="q17"><input type="hidden" name="q18"><input type="hidden" name="q18_other"><input type="hidden" name="q19"><input type="hidden" name="q20">
-      <input type="hidden" name="fit"><input type="hidden" name="review_flag"><input type="hidden" name="situation_picked">
+      <input type="hidden" name="fit"><input type="hidden" name="review_flag">
       <input type="hidden" name="engine_version"><input type="hidden" name="config_version"><input type="hidden" name="score_version">
       <p class="hp" hidden style="display:none" aria-hidden="true"><label>Leave empty: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
       <div class="row">
@@ -372,7 +450,7 @@
 <input type="hidden" name="plan">
 <input type="hidden" name="score_name"><input type="hidden" name="score"><input type="hidden" name="band"><input type="hidden" name="level"><input type="hidden" name="contain"><input type="hidden" name="command"><input type="hidden" name="close"><input type="hidden" name="confirm"><input type="hidden" name="control"><input type="hidden" name="weakest_c">
 <input type="hidden" name="q16"><input type="hidden" name="q17"><input type="hidden" name="q18"><input type="hidden" name="q18_other"><input type="hidden" name="q19"><input type="hidden" name="q20">
-<input type="hidden" name="fit"><input type="hidden" name="review_flag"><input type="hidden" name="situation_picked"><input type="hidden" name="engine_version"><input type="hidden" name="config_version"><input type="hidden" name="score_version">
+<input type="hidden" name="fit"><input type="hidden" name="review_flag"><input type="hidden" name="engine_version"><input type="hidden" name="config_version"><input type="hidden" name="score_version">
 <p class="hp" hidden style="display:none" aria-hidden="true"><label>Leave empty: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
 <h3 class="cform-h">Let&rsquo;s talk.</h3>
 <p class="cform-sub">Leave your details and we&rsquo;ll get in touch.</p>
@@ -421,6 +499,6 @@
 <script src="contracks.config.js"></script>
 <script src="contact-form.js"></script>
 <script src="quiz.js"></script>
-<script src="quiz-invite.js"></script>
+<script src="quiz-demo.js"></script>
 </body>
 </html>
