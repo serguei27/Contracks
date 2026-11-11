@@ -116,12 +116,13 @@
     return miss;
   }
   function start() {
-    $('intro').hidden = true; $('quiz').hidden = false; cur = 0; render();
+    $('intro').hidden = true; if ($('howScore')) $('howScore').hidden = true; $('quiz').hidden = false; cur = 0; render();
     $('quiz').scrollIntoView({ behavior: 'smooth' });
     track('score_started');
   }
   $('startBtn').addEventListener('click', start);
   $('startBtn2').addEventListener('click', start);
+  [].forEach.call(document.querySelectorAll('[data-start-quiz]'), function (b) { b.addEventListener('click', start); });
   $('backBtn').addEventListener('click', function () { if (cur > 0) { cur--; render(); $('quiz').scrollIntoView({ behavior: 'smooth' }); } });
   $('nextBtn').addEventListener('click', function () {
     var miss = missing(steps[cur]);
