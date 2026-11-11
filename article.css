@@ -26,7 +26,7 @@
 .site-foot p{margin:8px 0 12px}
 @media (max-width:760px){.site-top .links{display:none}.site-top .cta{padding:10px 16px;font-size:.85rem}.site-top .cta .lg{display:none}.site-top .cta .sm{display:inline}.call-block .in{padding:26px 20px}}
 @media print{.site-top,.site-foot,.call-block{display:none}}
-.site-top .cta{background:#C5A050!important;color:#0A1628!important}
+.site-top .cta{background:#0A1628!important;color:#fff!important}
 .ac-pulse{animation:crspulse 2.2s ease-out infinite}
 .ac-pulse:hover,.ac-pulse:focus-visible{animation:none}
 @media (prefers-reduced-motion:reduce){.ac-pulse{animation:none}}
